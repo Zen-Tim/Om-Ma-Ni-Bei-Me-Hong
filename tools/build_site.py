@@ -15,6 +15,7 @@ old one; the newest by file name wins) and run the script again.
 """
 import html
 import re
+import shutil
 import sys
 from pathlib import Path
 
@@ -169,6 +170,30 @@ def page_head(title, desc, css_files):
 </head>'''
 
 
+# ---------------------------------------------------------------- thumbnails
+# Newest Thumbnails/Lesson_N_Thumbnail_*.png per lesson -> public/thumbnails/lesson-N.png
+thumbs = set()
+(OUT / "thumbnails").mkdir(exist_ok=True)
+for n in range(1, 8):
+    found = sorted((ROOT / "Thumbnails").glob(f"Lesson_{n}_Thumbnail_*.png"))
+    if found:
+        shutil.copyfile(found[-1], OUT / "thumbnails" / f"lesson-{n}.png")
+        thumbs.add(n)
+    else:
+        print(f"  WARNING: no thumbnail for Lesson {n}; using the plain placeholder")
+
+
+def video_box(n, title):
+    if n in thumbs:
+        return (f'<div class="video has-poster" data-lesson="{n}">\n'
+                f'  <img class="video-poster" src="thumbnails/lesson-{n}.png" width="1280" height="720" '
+                f'alt="Lesson {n}: {html.escape(title)}">\n'
+                f'  <span class="video-soon">Video coming soon</span>\n</div>')
+    return (f'<div class="video" data-lesson="{n}">\n  <div class="video-ph">\n'
+            f'    <span class="video-ph-title">Video coming soon</span>\n'
+            f'    <span class="video-ph-sub">Lesson {n} class video</span>\n  </div>\n</div>')
+
+
 for L in lessons:
     n = L["n"]
     chunk = fix_links(L["chunk"], n)
@@ -189,12 +214,7 @@ for L in lessons:
 
 {band}
 
-<div class="video" data-lesson="{n}">
-  <div class="video-ph">
-    <span class="video-ph-title">Video coming soon</span>
-    <span class="video-ph-sub">Lesson {n} class video</span>
-  </div>
-</div>
+{video_box(n, L["title"])}
 
 <nav class="in-lesson" aria-label="In this lesson">
   <h2>In this lesson</h2>
@@ -231,10 +251,19 @@ def fix_article(m):
     art = m.group(0)
     n = re.search(r">Lesson (\d)</span>", art).group(1)
     art = re.sub(r'<a href="[^"]*"( style="[^"]*">Watch Lesson \d</a>)', rf'<a href="lesson-{n}.html"\1', art)
-    # Thumbnail becomes a link; videos.js swaps in the YouTube thumbnail once a video ID is set.
-    art = re.sub(r'<div style="(aspect-ratio: 16 / 9;[^"]*)">Video thumbnail</div>',
-                 rf'<a href="lesson-{n}.html" class="thumb" data-lesson="{n}" aria-label="Watch Lesson {n}" '
-                 rf'style="\1; text-decoration: none">Video coming soon</a>', art)
+    # Thumbnail becomes a link to the lesson; videos.js adds a play button once a video is set.
+    if int(n) in thumbs:
+        inner = (f'<img src="thumbnails/lesson-{n}.png" width="1280" height="720" alt="" '
+                 f'style="width: 100%; height: 100%; object-fit: cover; display: block">'
+                 f'<span class="thumb-soon">Video coming soon</span>')
+        extra = "; text-decoration: none; position: relative; overflow: hidden"
+    else:
+        inner, extra = "Video coming soon", "; text-decoration: none; position: relative"
+    art, hits = re.subn(r'<div style="(aspect-ratio: 16 / 9;[^"]*)">Video thumbnail</div>',
+                        lambda m: f'<a href="lesson-{n}.html" class="thumb" data-lesson="{n}" '
+                                  f'aria-label="Watch Lesson {n}" style="{m.group(1)}{extra}">{inner}</a>', art)
+    if hits != 1:
+        sys.exit(f"Build stopped: no thumbnail box found on landing card {n}")
     return art
 
 

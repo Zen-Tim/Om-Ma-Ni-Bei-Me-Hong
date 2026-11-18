@@ -29,33 +29,36 @@ var LESSON_VIDEOS = {
     return /^[A-Za-z0-9_-]{11}$/.test(value) ? value : "";
   }
 
-  // Lesson page: swap the placeholder for the YouTube player.
-  document.querySelectorAll(".video[data-lesson]").forEach(function (box) {
-    var id = videoId(LESSON_VIDEOS[box.getAttribute("data-lesson")]);
-    if (!id) return;
+  function player(box, id, autoplay) {
     var frame = document.createElement("iframe");
-    frame.src = "https://www.youtube-nocookie.com/embed/" + id + "?rel=0";
+    frame.src = "https://www.youtube-nocookie.com/embed/" + id + "?rel=0" + (autoplay ? "&autoplay=1" : "");
     frame.title = "Lesson " + box.getAttribute("data-lesson") + " class video";
-    frame.loading = "lazy";
     frame.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
     frame.referrerPolicy = "strict-origin-when-cross-origin";
     frame.allowFullscreen = true;
     box.innerHTML = "";
     box.appendChild(frame);
+    box.classList.add("playing");
+  }
+
+  // Lesson page: the thumbnail gets a play button; clicking it loads the YouTube player.
+  // With no thumbnail, the player loads straight away.
+  document.querySelectorAll(".video[data-lesson]").forEach(function (box) {
+    var n = box.getAttribute("data-lesson");
+    var id = videoId(LESSON_VIDEOS[n]);
+    if (!id) return;
     box.classList.add("has-video");
+    if (!box.querySelector(".video-poster")) { player(box, id, false); return; }
+    var btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "play";
+    btn.setAttribute("aria-label", "Play the Lesson " + n + " video");
+    btn.addEventListener("click", function () { player(box, id, true); });
+    box.appendChild(btn);
   });
 
-  // Landing page: show the YouTube thumbnail on each lesson card.
+  // Landing page: lesson cards with a video get a play button over the thumbnail.
   document.querySelectorAll(".thumb[data-lesson]").forEach(function (thumb) {
-    var id = videoId(LESSON_VIDEOS[thumb.getAttribute("data-lesson")]);
-    if (!id) return;
-    // YouTube's thumbnail is 4:3 with black bars; full width, centred, crops the bars off a 16:9 card.
-    thumb.style.backgroundImage = "url(https://i.ytimg.com/vi/" + id + "/hqdefault.jpg)";
-    thumb.style.backgroundSize = "100% auto";
-    thumb.style.backgroundPosition = "center";
-    thumb.style.backgroundRepeat = "no-repeat";
-    thumb.style.position = "relative";
-    thumb.textContent = "";
-    thumb.classList.add("has-video");
+    if (videoId(LESSON_VIDEOS[thumb.getAttribute("data-lesson")])) thumb.classList.add("has-video");
   });
 })();

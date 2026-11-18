@@ -10,10 +10,14 @@ img{max-width:100%}
 
 /* ---------- landing page ---------- */
 body.landing{font-size:17px}
-.landing .thumb{color:#5b6670;background-color:#eef1ee;background-size:cover;background-position:center;position:relative}
-.landing .thumb.has-video{color:transparent}
-.landing .thumb.has-video::after{content:"";position:absolute;left:50%;top:50%;width:64px;height:44px;margin:-22px 0 0 -32px;border-radius:12px;background:rgba(31,42,51,.82) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23fff' d='M8 5v14l11-7z'/%3E%3C/svg%3E") center/26px no-repeat}
+.landing .thumb{color:#5b6670}
+.landing .thumb.has-video::after{content:"";position:absolute;right:4.5%;bottom:5.5%;width:52px;height:36px;border-radius:10px;background:rgba(31,42,51,.82) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23fff' d='M8 5v14l11-7z'/%3E%3C/svg%3E") center/26px no-repeat}
 .landing .thumb.has-video:hover::after{background-color:#b8466e}
+
+/* "Video coming soon" tag over a thumbnail, hidden once a video is set */
+/* Placed bottom-right: the one corner the thumbnail designs leave empty. */
+.thumb-soon,.video-soon{position:absolute;right:4.5%;bottom:5.5%;padding:5px 12px;border-radius:999px;background:rgba(31,42,51,.85);color:#fff;font-size:13px;font-weight:700;letter-spacing:.02em}
+.has-video .thumb-soon,.has-video .video-soon{display:none}
 @media (max-width:640px){
   .landing h1{font-size:42px!important}
   .landing h2{font-size:30px!important}
@@ -47,7 +51,14 @@ nav.jump a[aria-current="page"]{background:#b8466e;border-color:#b8466e;color:#f
 
 /* ---------- lesson pages: video ---------- */
 .video{margin-top:20px;aspect-ratio:16/9;border-radius:12px;overflow:hidden;background:#eef1ee;border:2px dashed #b9c3bd}
-.video.has-video{border:0;background:#000}
+.video{position:relative}
+.video.has-poster,.video.has-video{border:0}
+.video.playing{background:#000}
+.video-poster{width:100%;height:100%;object-fit:cover;display:block}
+.video .play{all:unset;position:absolute;inset:0;cursor:pointer}
+.video .play::after{content:"";position:absolute;right:5%;bottom:6%;width:clamp(52px,11%,84px);aspect-ratio:84/58;border-radius:12px;background:rgba(31,42,51,.85) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23fff' d='M8 5v14l11-7z'/%3E%3C/svg%3E") center/34px no-repeat;transition:background-color .15s}
+.video .play:hover::after{background-color:#b8466e}
+.video .play:focus-visible{outline:3px solid #b8466e;outline-offset:-3px;border-radius:12px}
 .video iframe{width:100%;height:100%;border:0;display:block}
 .video-ph{height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;text-align:center;padding:16px}
 .video-ph-title{font-family:Marcellus,Georgia,serif;font-size:22px;color:#5b6670}
