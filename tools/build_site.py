@@ -71,6 +71,29 @@ for label, pattern, repl in CLEANUP:
     notes, hits = re.subn(pattern, repl, notes, flags=re.S)
     print(f"  cleanup: {label}: {hits} removed/fixed" if hits else f"  WARNING: cleanup found nothing for {label}")
 
+# ---------------------------------------------------------------- spelling
+# The course name is the Chinese form, Om Ma Ni Bei Me Hong (嗡嘛呢叭咪吽).
+# Oṃ Maṇi Padme Hūṃ appears only as "the common English spelling, which is not correct".
+NAME = "Om Ma Ni Bei Me Hong"
+SANSKRIT = "Oṃ Maṇi Padme Hūṃ"
+SPELLING = [
+    ("names section sentence",
+     r"Sifu says the mantra the Chinese way\. Most English books spell it the Sanskrit way\. "
+     r"This course writes the mantra as Om Mani Padme Hom\.",
+     f"Sifu says the mantra the Chinese way, and the Chinese way is correct. Most English books spell it "
+     f"the Sanskrit way, {SANSKRIT}. That common spelling is not correct. This course writes the mantra as {NAME}."),
+    ("names table header", r"<th>Most English books</th>", "<th>Common English spelling (not correct)</th>"),
+    ("names table: Om", r'(<td class="han">嗡</td><td>Om</td>)<td>Om</td>', r"\1<td>Oṃ</td>"),
+    ("names table: Mani", r'(<td class="han">嘛呢</td><td>Ma Ni</td>)<td>Mani</td>', r"\1<td>Maṇi</td>"),
+    ("names table: Hum", r'(<td class="han">吽</td><td>Hong</td>)<td>Hum</td>', r"\1<td>Hūṃ</td>"),
+    ("quiz answer", r"Most English books write Om Mani Padme Hum\.",
+     f"Most English books write {SANSKRIT}, from Sanskrit. That common spelling is not correct."),
+    ("course name", r"Om Mani Padme Hom", NAME),
+]
+for label, pattern, repl in SPELLING:
+    notes, hits = re.subn(pattern, repl, notes)
+    print(f"  spelling: {label}: {hits} fixed" if hits else f"  WARNING: spelling found nothing for {label}")
+
 # ---------------------------------------------------------------- notes CSS
 css = re.search(r"<style>\n(/\* Layout.*?)</style>", notes, re.S).group(1)
 css = re.sub(r"/\* Layout:.*?\*/\n", "", css)
@@ -143,7 +166,7 @@ def site_header(current):
         + f'>Lesson {i}</a>' for i in range(1, 8))
     return f'''<header class="site-header">
   <div class="site-header-in">
-    <a class="brand" href="./"><span class="han">嗡</span><span>Om Mani Padme Hom</span></a>
+    <a class="brand" href="./"><span class="han">嗡</span><span>{NAME}</span></a>
     <nav aria-label="Main"><a href="./#lessons">All lessons</a></nav>
   </div>
 </header>
@@ -207,7 +230,7 @@ for L in lessons:
     next_link = (f'<a class="pn next" href="lesson-{n+1}.html"><span>Next</span>'
                  f'Lesson {n+1}: {html.escape(lessons[n]["title"])}</a>') if n < 7 else \
                 '<a class="pn next" href="./#lessons"><span>Next</span>Back to all lessons</a>'
-    page = f'''{page_head(f"Lesson {n}: {L['title']} · Om Mani Padme Hom", L["desc"], ["assets/site.css", "assets/notes.css"])}
+    page = f'''{page_head(f"Lesson {n}: {L['title']} · {NAME}", L["desc"], ["assets/site.css", "assets/notes.css"])}
 <body class="lesson-page">
 {site_header(n)}
 <main class="wrap">
@@ -228,7 +251,7 @@ for L in lessons:
 </nav>
 
 </main>
-<footer class="site-footer"><div class="site-footer-in"><span>Om Mani Padme Hom · A course with Master Wisdom Kindness</span><span>© 2026</span></div></footer>
+<footer class="site-footer"><div class="site-footer-in"><span>{NAME} 嗡嘛呢叭咪吽 · A course with Master Wisdom Kindness</span><span>© 2026</span></div></footer>
 <script src="assets/videos.js"></script>
 <script src="assets/notes.js"></script>
 </body>
@@ -242,6 +265,18 @@ lbody = lbody.strip()
 lbody = lbody[:lbody.rstrip().rindex("</div>")].strip()          # drop the outer wrapper's closing tag
 lbody = lbody[lbody.index(">") + 1:].strip()                      # and its opening tag
 lbody = lbody.replace("{{accent}}", ACCENT)
+# Hero: the title becomes the Chinese form; the line under the characters becomes the spelling note.
+lbody = must_replace(
+    lbody,
+    '<span style="font-family: Marcellus, Georgia, serif; font-size: 20px; color: #5b6670">Om Ma Ni Bei Me Hong</span>\n</div>',
+    '</div>\n<p style="margin: 0; max-width: 34em; padding: 12px 16px; background: #ffffff; border: 1px solid #dde3df; '
+    'border-left: 3px solid #b8466e; border-radius: 0 10px 10px 0; font-size: 16px; color: #3a4650">'
+    f'<b>A note on spelling.</b> Most English books write this mantra <i>{SANSKRIT}</i>, from Sanskrit. '
+    f'That common spelling is not correct. The correct form is the Chinese: '
+    f'<span lang="zh-Hant" style="font-family: \'Noto Serif TC\', serif; color: #b8466e; white-space: nowrap">嗡嘛呢叭咪吽</span>, '
+    f'{NAME}. This course uses it throughout.</p>')
+lbody, hits = re.subn(r"Om Mani Padme Hom", NAME, lbody)
+print(f"  spelling: landing page: {hits} fixed")
 lbody = must_replace(lbody, 'href="#top"', 'href="./"')
 # Buttons that started Lesson 1 now open the Lesson 1 page.
 lbody = lbody.replace('href="#lesson-1"', 'href="lesson-1.html"')
@@ -274,8 +309,9 @@ lbody = lbody.replace("© [YEAR] [SITE NAME]", "© 2026")
 if "{{" in lbody or "[SITE" in lbody:
     sys.exit("Build stopped: a placeholder is left in the landing page")
 
-index =f'''{page_head("Om Mani Padme Hom · Free video course",
-                      "Learn what the mantra Om Mani Padme Hom means, part by part. Seven recorded classes with Master Wisdom Kindness (Sifu).",
+index =f'''{page_head(f"{NAME} 嗡嘛呢叭咪吽 · Free video course",
+                      f"Learn what the mantra {NAME} (嗡嘛呢叭咪吽) means, part by part. Often written Om Mani Padme Hum. "
+                      "Seven recorded classes with Master Wisdom Kindness (Sifu).",
                       ["assets/site.css"])}
 <body class="landing">
 {lbody}

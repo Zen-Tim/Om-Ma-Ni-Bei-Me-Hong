@@ -20,7 +20,7 @@ const WORDS = [
   ["Yi Jin Jing","A body training system from Buddhadharma, for a body with no tension, good energy and a beautiful posture."]
 ];
 const QUIZ = [
-  {q:"What are the four parts of the mantra, as Sifu says them?", o:["Om, Ma Ni, Bei Me, Hong","Om, Argh, Oh, Mm","Om, Mani, Lotus, Om"], a:0, w:"In Chinese: 嗡 Om, 嘛呢 Ma Ni, 叭咪 Bei Me, 吽 Hong. Most English books write Om Mani Padme Hum."},
+  {q:"What are the four parts of the mantra, as Sifu says them?", o:["Om, Ma Ni, Bei Me, Hong","Om, Argh, Oh, Mm","Om, Mani, Lotus, Om"], a:0, w:"In Chinese: 嗡 Om, 嘛呢 Ma Ni, 叭咪 Bei Me, 吽 Hong. Most English books write Oṃ Maṇi Padme Hūṃ, from Sanskrit. That common spelling is not correct."},
   {q:"Why does Sifu teach this explanation, out of the many that exist?", o:["The other explanations are wrong","The meaning and function fit together perfectly, and the explanation purifies his consciousness and shows the complete system of life","Sifu made this explanation himself"], a:1, w:"Sifu does not say the others are wrong. The explanation is not his own. Sifu learned it."},
   {q:"What do the four sounds in Om stand for, in order?", o:["Joy, peace, light, silence","Suffering, understanding, free from suffering, content","Birth, aging, illness, death"], a:1, w:"Argh is suffering. Oh is understanding life. Mm is free from suffering, which Sifu calls healing. Silent is a content heart."},
   {q:"What is the second use of Om?", o:["To end a meditation","To open the heart: to begin meditation or another mantra, or to bow to a Buddha or Bodhisattva","To ask for protection"], a:1, w:"Used this way, Om means: my heart is open and sincere, and I want to learn complete wisdom and complete compassion."},
