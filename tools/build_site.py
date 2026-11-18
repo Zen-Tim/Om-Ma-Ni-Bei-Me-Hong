@@ -46,6 +46,30 @@ landing_path = newest("Landing_Page_Mockup_*.html")
 notes = notes_path.read_text(encoding="utf-8")
 landing = landing_path.read_text(encoding="utf-8")
 
+# ---------------------------------------------------------------- remove study-page admin text
+# The notes file carries production notes (sources, versions, open questions) and
+# cross-references that only made sense on one long page. None belong on the website.
+# A rule that finds nothing only prints a warning, so a new notes version still builds.
+CLEANUP = [
+    ("'Recording date to confirm' in lesson headers",
+     r'(<span class="eyebrow">Lesson \d) · Recording date to confirm</span>', r"\1</span>"),
+    ("double pointer to Lesson 2 in the fear note",
+     r"Sifu said a deep wisdom sits behind the answer, and Sifu will explain it next time\. "
+     r'Sifu answered GD\'s question in (<a href="#lesson2">Lesson 2</a>)\.',
+     r"Sifu said a deep wisdom sits behind the answer. Sifu answers this in \1."),
+    ("'Answered in Lesson 2' topic",
+     r"\s*<details open>\s*<summary>Answered in Lesson 2</summary>.*?</details>", ""),
+    ("'on this page' in Lesson 2",
+     r'(The first video is <a href="#lesson1">Lesson 1</a>) on this page\.', r"\1."),
+    ("'Coming later' sections",
+     r'\s*<section id="l\d-next">.*?</section>', ""),
+    ("'Coming later' entries in the section lists",
+     r'\s*<li><a href="#l\d-next">[^<]*</a></li>', ""),
+]
+for label, pattern, repl in CLEANUP:
+    notes, hits = re.subn(pattern, repl, notes, flags=re.S)
+    print(f"  cleanup: {label}: {hits} removed/fixed" if hits else f"  WARNING: cleanup found nothing for {label}")
+
 # ---------------------------------------------------------------- notes CSS
 css = re.search(r"<style>\n(/\* Layout.*?)</style>", notes, re.S).group(1)
 css = re.sub(r"/\* Layout:.*?\*/\n", "", css)
@@ -97,12 +121,6 @@ for n, (chunk, card) in enumerate(zip(chunks, cards), 1):
         "toc": re.search(r"<ol>(.*?)</ol>", card, re.S).group(1),
         "chunk": chunk,
     })
-
-# Footer source note, one sentence group per lesson.
-footer = re.search(r"<footer>(.*?)</footer>", notes, re.S).group(1)
-sources = {int(m.group(1)): m.group(0).strip()
-           for m in re.finditer(r"Lesson (\d) notes come from.*?\)\.", footer)}
-version = re.search(r"Study page (v[\d.]+ · \d+)", footer).group(1)
 
 
 def fix_links(text, n):
@@ -189,7 +207,6 @@ for L in lessons:
   {next_link}
 </nav>
 
-<p class="source">{html.escape(sources.get(n, ""))} Study notes {html.escape(version)}.</p>
 </main>
 <footer class="site-footer"><div class="site-footer-in"><span>Om Mani Padme Hom · A course with Master Wisdom Kindness</span><span>© 2026</span></div></footer>
 <script src="assets/videos.js"></script>
