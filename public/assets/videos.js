@@ -11,12 +11,12 @@
    ============================================================ */
 var LESSON_VIDEOS = {
   1: "",
-  2: "",
-  3: "",
+  2: "https://youtu.be/zAsUVkCNA-g",
+  3: "https://youtu.be/lXfoW1qPrQ0",
   4: "",
-  5: "",
-  6: "",
-  7: ""
+  5: "https://youtu.be/3oZk5i2ucGA",
+  6: "https://youtu.be/n1dQkXmoBCk",
+  7: "https://youtu.be/ZsWu211SsHs"
 };
 
 /* ---- nothing to edit below this line ---- */
@@ -49,7 +49,13 @@ var LESSON_VIDEOS = {
   document.querySelectorAll(".thumb[data-lesson]").forEach(function (thumb) {
     var id = videoId(LESSON_VIDEOS[thumb.getAttribute("data-lesson")]);
     if (!id) return;
+    // YouTube's thumbnail is 4:3 with black bars; full width, centred, crops the bars off a 16:9 card.
     thumb.style.backgroundImage = "url(https://i.ytimg.com/vi/" + id + "/hqdefault.jpg)";
+    thumb.style.backgroundSize = "100% auto";
+    thumb.style.backgroundPosition = "center";
+    thumb.style.backgroundRepeat = "no-repeat";
+    thumb.style.position = "relative";
+    thumb.textContent = "";
     thumb.classList.add("has-video");
   });
 })();
