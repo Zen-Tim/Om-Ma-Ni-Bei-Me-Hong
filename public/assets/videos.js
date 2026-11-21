@@ -10,10 +10,10 @@
    thumbnail on the landing page.
    ============================================================ */
 var LESSON_VIDEOS = {
-  1: "",
+  1: "https://youtu.be/o2Ux-Ez19JU",
   2: "https://youtu.be/zAsUVkCNA-g",
   3: "https://youtu.be/lXfoW1qPrQ0",
-  4: "",
+  4: "https://youtu.be/8P3ZXcOG_ho",
   5: "https://youtu.be/3oZk5i2ucGA",
   6: "https://youtu.be/n1dQkXmoBCk",
   7: "https://youtu.be/ZsWu211SsHs"
