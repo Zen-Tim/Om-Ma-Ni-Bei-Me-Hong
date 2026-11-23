@@ -76,21 +76,15 @@ for label, pattern, repl in CLEANUP:
 
 # ---------------------------------------------------------------- spelling
 # The course name is the Chinese form, Om Ma Ni Bei Me Hong (嗡嘛呢叭咪吽).
-# Oṃ Maṇi Padme Hūṃ appears only as "the common English spelling, which is not correct".
+# Oṃ Maṇi Padme Hūṃ is shown as the common spelling in English books, from Sanskrit.
+# Neither spelling is called right or wrong. The spelling note itself comes from the notes file.
 NAME = "Om Ma Ni Bei Me Hong"
 SANSKRIT = "Oṃ Maṇi Padme Hūṃ"
 SPELLING = [
-    ("names section sentence",
-     r"Sifu says the mantra the Chinese way\. Most English books spell it the Sanskrit way\. "
-     r"This course writes the mantra as Om Mani Padme Hom\.",
-     f"Sifu says the mantra the Chinese way, and the Chinese way is correct. Most English books spell it "
-     f"the Sanskrit way, {SANSKRIT}. That common spelling is not correct. This course writes the mantra as {NAME}."),
-    ("names table header", r"<th>Most English books</th>", "<th>Common English spelling (not correct)</th>"),
+    ("names table header", r"<th>Most English books</th>", "<th>Most English books (from Sanskrit)</th>"),
     ("names table: Om", r'(<td class="han">嗡</td><td>Om</td>)<td>Om</td>', r"\1<td>Oṃ</td>"),
     ("names table: Mani", r'(<td class="han">嘛呢</td><td>Ma Ni</td>)<td>Mani</td>', r"\1<td>Maṇi</td>"),
     ("names table: Hum", r'(<td class="han">吽</td><td>Hong</td>)<td>Hum</td>', r"\1<td>Hūṃ</td>"),
-    ("quiz answer", r"Most English books write Om Mani Padme Hum\.",
-     f"Most English books write {SANSKRIT}, from Sanskrit. That common spelling is not correct."),
     ("course name", r"Om Mani Padme Hom", NAME),
 ]
 for label, pattern, repl in SPELLING:
@@ -276,9 +270,9 @@ lbody = must_replace(
     '</div>\n<p style="margin: 0; max-width: 34em; padding: 12px 16px; background: #ffffff; border: 1px solid #dde3df; '
     'border-left: 3px solid #b8466e; border-radius: 0 10px 10px 0; font-size: 16px; color: #3a4650">'
     f'<b>A note on spelling.</b> Most English books write this mantra <i>{SANSKRIT}</i>, from Sanskrit. '
-    f'That common spelling is not correct. The correct form is the Chinese: '
+    f'The common spelling in Chinese is '
     f'<span lang="zh-Hant" style="font-family: \'Noto Serif TC\', serif; color: #b8466e; white-space: nowrap">嗡嘛呢叭咪吽</span>, '
-    f'{NAME}. This course uses it throughout.</p>')
+    f'{NAME}.</p>')
 lbody, hits = re.subn(r"Om Mani Padme Hom", NAME, lbody)
 print(f"  spelling: landing page: {hits} fixed")
 lbody = must_replace(lbody, 'href="#top"', 'href="./"')
