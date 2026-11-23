@@ -1,13 +1,13 @@
 # Om Mani Padme Hom course site
 
-A static website: one landing page and 7 lesson pages. Light theme only.
+A static website: one landing page and 8 lesson pages. Light theme only.
 
 ## What's where
 
 - `public/` — the website itself. This is the only folder Vercel publishes.
   - `index.html` — landing page
-  - `lesson-1.html` … `lesson-7.html` — one page per lesson: video, section list, notes, quiz
-  - `assets/videos.js` — **the YouTube links for all 7 lessons**
+  - `lesson-1.html` … `lesson-8.html` — one page per lesson: video, section list, notes, quiz
+  - `assets/videos.js` — **the YouTube links for all 8 lessons**
 - `tools/build_site.py` — rebuilds the pages from the two source files below.
 - `Landing_Page_Mockup_*.html` and `Om_Mani_Padme_Hom_Study_Notes_*.html` — the source files. Not published.
 

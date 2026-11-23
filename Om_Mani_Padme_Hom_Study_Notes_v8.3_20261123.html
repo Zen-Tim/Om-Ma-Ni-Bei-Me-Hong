@@ -1,0 +1,2361 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Om Mani Padme Hom Study Notes v8.3 · 20261123</title>
+<meta charset="UTF-8">
+<meta name="color-scheme" content="light only">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Noto+Serif+TC:wght@500&display=swap">
+<style>
+/* Layout: one calm reading column, same system as the Amitabha study page. A contents block lists both lessons; each lesson opens with its own band, and Lesson 2 builds on Lesson 1. Light theme only, by choice. */
+:root{
+  color-scheme: light only;
+  --bg:#f7f8f6;
+  --panel:#ffffff;
+  --ink:#1f2a33;
+  --muted:#5b6670;
+  --line:#dde3df;
+  --lotus:#b8466e;
+  --lotus-soft:#f6e6ec;
+  --jade:#2f6f62;
+  --jade-soft:#e3f0ec;
+  --miss:#a8432f;
+  --miss-soft:#f8e7e2;
+  --gold:#a77b1f;
+  --gold-soft:#f7efdc;
+  --indigo:#3c5a86;
+  --indigo-soft:#e5ebf4;
+  --saffron:#9a5a14;
+  --saffron-soft:#f8ecdc;
+  --f-display:"Marcellus", "Palatino Linotype", Palatino, Georgia, serif;
+  --f-body:"Atkinson Hyperlegible", "Segoe UI", Helvetica, Arial, sans-serif;
+  --f-han:"Noto Serif TC", "PMingLiU", "Songti TC", serif;
+  --s-0:.875rem; --s-1:1rem; --s-2:1.125rem; --s-3:1.4rem; --s-4:1.9rem; --s-5:2.6rem;
+}
+*{box-sizing:border-box}
+html,body{background:var(--bg);color:var(--ink)}
+body{font-family:var(--f-body);font-size:var(--s-1);line-height:1.6;padding-inline:16px;padding-block:0 48px}
+.wrap{max-width:46rem;margin:0 auto}
+h1,h2,h3{font-family:var(--f-display);font-weight:400;line-height:1.2;text-wrap:balance;margin:0}
+h1{font-size:var(--s-5)}
+h2{font-size:var(--s-4)}
+h3{font-size:var(--s-3)}
+p{margin:0}
+.flow>*+*{margin-top:.85rem}
+a{color:var(--lotus)}
+:focus-visible{outline:3px solid var(--lotus);outline-offset:2px;border-radius:6px}
+.eyebrow{font-size:var(--s-0);letter-spacing:.12em;text-transform:uppercase;color:var(--lotus);font-weight:700}
+.han{font-family:var(--f-han);font-weight:500}
+
+header{padding-block:40px 20px;display:flex;flex-direction:column;gap:10px;border-bottom:1px solid var(--line)}
+.byline{color:var(--muted);font-size:var(--s-0)}
+.banner{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 16px}
+.banner .han{font-size:var(--s-4);color:var(--lotus);letter-spacing:.08em}
+.banner .say{font-family:var(--f-display);font-size:var(--s-2);color:var(--muted)}
+nav.jump{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding-block:10px;border-bottom:1px solid var(--line);display:flex;flex-wrap:wrap;gap:6px}
+nav.jump a{font-size:var(--s-0);text-decoration:none;color:var(--ink);padding:4px 10px;border:1px solid var(--line);border-radius:999px;background:var(--panel)}
+nav.jump a:hover{border-color:var(--lotus);color:var(--lotus)}
+
+section{padding-block:36px 4px;display:flex;flex-direction:column;gap:16px;scroll-margin-top:64px}
+
+.summary{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:20px}
+.summary ul{margin:0;padding-left:1.3rem;display:flex;flex-direction:column;gap:.35rem}
+
+/* four parts: styles */
+.path{display:flex;flex-direction:column;gap:0}
+.stop{display:grid;grid-template-columns:56px 1fr;gap:12px;align-items:start}
+.stop button{all:unset;cursor:pointer;display:block;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 14px;min-width:0}
+.stop button:hover{border-color:var(--lotus)}
+.stop button:focus-visible{outline:3px solid var(--lotus);outline-offset:2px}
+.stop.on button{border-color:var(--lotus);box-shadow:0 0 0 2px var(--lotus-soft)}
+.stop .where{font-family:var(--f-display);font-size:var(--s-2)}
+.stop .when{font-size:var(--s-0);color:var(--muted)}
+.stop .more{margin-top:8px;font-size:var(--s-1)}
+.dot{width:56px;height:56px;border-radius:50%;display:grid;place-items:center;font-family:var(--f-han);font-weight:500;font-size:var(--s-2);line-height:1;background:var(--lotus-soft);color:var(--lotus);border:1px solid var(--lotus)}
+.stop.last .dot{background:var(--gold-soft);color:var(--gold);border-color:var(--gold)}
+.link{width:56px;height:26px;display:flex;justify-content:center}
+.link::before{content:"";width:2px;background:var(--line)}
+.hint{font-size:var(--s-0);color:var(--muted)}
+
+/* four sounds of Om */
+.sounds{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+@media (max-width:560px){.sounds{grid-template-columns:repeat(2,1fr)}}
+.sound{background:var(--panel);border:1px solid var(--line);border-top:3px solid var(--lotus);border-radius:10px;padding:14px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.sound:last-child{border-top-color:var(--gold)}
+.sound .n{font-size:var(--s-0);color:var(--lotus);font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.sound h3{font-size:var(--s-3)}
+.sound p{font-size:var(--s-0)}
+
+/* key words */
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(13rem,1fr));gap:10px}
+.card{all:unset;cursor:pointer;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px;min-height:7.5rem;display:flex;flex-direction:column;justify-content:center;gap:6px;min-width:0}
+.card:hover{border-color:var(--lotus)}
+.card:focus-visible{outline:3px solid var(--lotus);outline-offset:2px}
+.card .term{font-family:var(--f-display);font-size:var(--s-3);text-align:center}
+.card .tap{font-size:var(--s-0);color:var(--muted);text-align:center}
+.card .def{font-size:var(--s-1)}
+.card.flip{background:var(--lotus-soft);border-color:var(--lotus)}
+.card.flip .term{font-size:var(--s-1);text-align:left;color:var(--lotus);font-family:var(--f-body);font-weight:700}
+.row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.btn{all:unset;cursor:pointer;font-size:var(--s-0);padding:6px 12px;border:1px solid var(--line);border-radius:999px;background:var(--panel)}
+.btn:hover{border-color:var(--lotus);color:var(--lotus)}
+.btn:focus-visible{outline:3px solid var(--lotus);outline-offset:2px}
+
+/* topics: styles */
+details{background:var(--panel);border:1px solid var(--line);border-radius:10px}
+summary{cursor:pointer;padding:14px 16px;font-family:var(--f-display);font-size:var(--s-3);list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--lotus);font-family:var(--f-body)}
+details[open] summary::after{content:"–"}
+.body{padding:0 16px 16px;display:flex;flex-direction:column;gap:.8rem;min-width:0}
+.body ul,.body ol{margin:0;padding-left:1.3rem;display:flex;flex-direction:column;gap:.3rem}
+.tablewrap{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:var(--s-1)}
+th,td{text-align:left;vertical-align:top;padding:8px 10px;border-bottom:1px solid var(--line)}
+th{font-size:var(--s-0);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:700}
+td.han{font-size:var(--s-2);color:var(--lotus)}
+.note{background:var(--gold-soft);border-left:3px solid var(--gold);padding:10px 12px;border-radius:0 8px 8px 0}
+.mantra{font-family:var(--f-display);font-size:var(--s-3);color:var(--lotus)}
+.layer{display:flex;flex-direction:column;gap:.5rem}
+
+/* quiz */
+.score{font-size:var(--s-2);font-variant-numeric:tabular-nums}
+.q{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px;display:flex;flex-direction:column;gap:10px}
+.q .qn{font-size:var(--s-0);color:var(--muted);font-variant-numeric:tabular-nums}
+.q .prompt{font-weight:700}
+.opts{display:flex;flex-direction:column;gap:6px}
+.opt{all:unset;cursor:pointer;padding:10px 12px;border:1px solid var(--line);border-radius:8px;background:var(--bg)}
+.opt:hover{border-color:var(--lotus)}
+.opt:focus-visible{outline:3px solid var(--lotus);outline-offset:2px}
+.opt.right{background:var(--jade-soft);border-color:var(--jade)}
+.opt.wrong{background:var(--miss-soft);border-color:var(--miss)}
+.opt[disabled]{cursor:default}
+.why{font-size:var(--s-1)}
+.why b.ok{color:var(--jade)}
+.why b.no{color:var(--miss)}
+
+/* contents and lesson bands */
+.toc{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+@media (max-width:760px){.toc{grid-template-columns:1fr}}
+.toc-card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.toc-card .tag{font-size:var(--s-0);letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--lotus)}
+.toc-card h3 a{color:var(--ink);text-decoration:none}
+.toc-card h3 a:hover{color:var(--lotus)}
+.toc-card .date{font-size:var(--s-0);color:var(--muted)}
+.toc-card ol{margin:0;padding-left:1.2rem;display:flex;flex-direction:column;gap:.15rem;font-size:var(--s-0)}
+.toc-card ol a{color:var(--ink)}
+.toc-card ol a:hover{color:var(--lotus)}
+.lesson-band{margin-top:48px;padding:22px 20px;border-radius:12px;background:var(--lotus-soft);border:1px solid var(--lotus);display:flex;flex-direction:column;gap:6px;scroll-margin-top:64px}
+.lesson-band.two{background:var(--jade-soft);border-color:var(--jade)}
+.lesson-band.two .eyebrow{color:var(--jade)}
+.lesson-band p{color:var(--muted);font-size:var(--s-0)}
+.lesson-band.three{background:var(--gold-soft);border-color:var(--gold)}
+.lesson-band.three .eyebrow{color:var(--gold)}
+.pane.gold{border-top-color:var(--gold)}
+.pane.gold .n{color:var(--gold)}
+.lesson-band.four{background:var(--indigo-soft);border-color:var(--indigo)}
+.lesson-band.four .eyebrow{color:var(--indigo)}
+.pane.indigo{border-top-color:var(--indigo)}
+.pane.indigo .n{color:var(--indigo)}
+.pane.miss{border-top-color:var(--miss)}
+.pane.miss .n{color:var(--miss)}
+.lede{font-family:var(--f-display);font-size:var(--s-2);color:var(--muted);margin-top:-8px}
+.trio{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+@media (max-width:560px){.trio{grid-template-columns:1fr}}
+.chain{margin:0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.chain li{padding:4px 10px;border:1px solid var(--line);border-radius:999px;background:var(--panel);font-size:var(--s-0)}
+.chain li+li::before{content:"→";margin-right:8px;color:var(--muted)}
+.pair{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+@media (max-width:560px){.pair{grid-template-columns:1fr}}
+.pane{background:var(--panel);border:1px solid var(--line);border-top:3px solid var(--jade);border-radius:10px;padding:16px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.pane .n{font-size:var(--s-0);color:var(--jade);font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.pane ul{margin:0;padding-left:1.2rem;display:flex;flex-direction:column;gap:.3rem}
+.voice{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.voice .who{font-size:var(--s-0);letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--jade)}
+.voice ul{margin:0;padding-left:1.2rem;display:flex;flex-direction:column;gap:.3rem}
+.plain{margin:0;padding-left:1.3rem;display:flex;flex-direction:column;gap:.35rem}
+.steps{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px;counter-reset:st}
+.steps li{counter-increment:st;display:grid;grid-template-columns:40px 1fr;gap:12px;align-items:start;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+.steps li::before{content:counter(st);width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:var(--jade-soft);color:var(--jade);border:1px solid var(--jade);font-family:var(--f-display);font-size:var(--s-2)}
+.steps li span{align-self:center}
+.answered{background:var(--jade-soft);border-left:3px solid var(--jade);padding:10px 12px;border-radius:0 8px 8px 0}
+td.part{font-family:var(--f-display);font-size:var(--s-2);white-space:nowrap}
+
+.lesson-band.five{background:var(--saffron-soft);border-color:var(--saffron)}
+.lesson-band.five .eyebrow{color:var(--saffron)}
+.pane.saffron{border-top-color:var(--saffron)}
+.pane.saffron .n{color:var(--saffron)}
+.sound.now{border-top-color:var(--saffron);background:var(--saffron-soft)}
+.sound.now .n{color:var(--saffron)}
+.toc-card.wide{grid-column:1/-1}
+.lesson-band.six{background:#efe9f4;border-color:#6a4a8c}
+.lesson-band.six .eyebrow{color:#6a4a8c}
+.pane.plum{border-top-color:#6a4a8c}
+.pane.plum .n{color:#6a4a8c}
+.sound.now6{border-top-color:#6a4a8c;background:#efe9f4}
+.sound.now6 .n{color:#6a4a8c}
+.lesson-band.seven{background:#e1eff5;border-color:#1f6e8c}
+.lesson-band.seven .eyebrow{color:#1f6e8c}
+.pane.teal{border-top-color:#1f6e8c}
+.pane.teal .n{color:#1f6e8c}
+.sound.now7{border-top-color:#1f6e8c;background:#e1eff5}
+.sound.now7 .n{color:#1f6e8c}
+.lesson-band.eight{background:#ecf1e2;border-color:#4f6b2a}
+.lesson-band.eight .eyebrow{color:#4f6b2a}
+.pane.moss{border-top-color:#4f6b2a}
+.pane.moss .n{color:#4f6b2a}
+.sound.now8{border-top-color:#4f6b2a;background:#ecf1e2}
+.sound.now8 .n{color:#4f6b2a}
+
+footer{margin-top:40px;padding-top:16px;border-top:1px solid var(--line);font-size:var(--s-0);color:var(--muted)}
+@media (max-width:480px){h1{font-size:var(--s-4)}}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+</style>
+
+<div class="wrap">
+
+<header>
+  <span class="eyebrow">Om Mani Padme Hom · Study notes · Lessons 1 to 8</span>
+  <h1>Om Mani Padme Hom</h1>
+  <div class="banner"><span class="han">嗡嘛呢叭咪吽</span><span class="say">Om Ma Ni Bei Me Hong</span></div>
+  <p class="byline">Teacher: Master Wisdom Kindness (Sifu) · Questions from Tim and GD · Study page v8.3 · 20261123</p>
+</header>
+
+<nav class="jump" aria-label="Jump to section">
+  <a href="#contents">Contents</a>
+  <a href="#lesson1">Lesson 1</a>
+  <a href="#lesson2">Lesson 2</a>
+  <a href="#lesson3">Lesson 3</a>
+  <a href="#lesson4">Lesson 4</a>
+  <a href="#lesson5">Lesson 5</a>
+  <a href="#lesson6">Lesson 6</a>
+  <a href="#lesson7">Lesson 7</a>
+  <a href="#lesson8">Lesson 8</a>
+</nav>
+
+<section id="contents">
+  <h2>Contents</h2>
+  <div class="toc">
+    <div class="toc-card">
+      <span class="tag">Lesson 1</span>
+      <h3><a href="#lesson1">The meaning</a></h3>
+      <ol>
+        <li><a href="#summary">Summary</a></li>
+        <li><a href="#names">The names</a></li>
+        <li><a href="#parts">The four parts</a></li>
+        <li><a href="#om">Om has four sounds</a></li>
+        <li><a href="#words">Key words</a></li>
+        <li><a href="#topics">Topics</a></li>
+        <li><a href="#quiz">Check your understanding</a></li>
+      </ol>
+    </div>
+    <div class="toc-card">
+      <span class="tag">Lesson 2</span>
+      <h3><a href="#lesson2">How to make the mantra work</a></h3>
+      <ol>
+        <li><a href="#l2-summary">Summary</a></li>
+        <li><a href="#l2-meaning">Condition 1: understand the meaning</a></li>
+        <li><a href="#l2-heart">Condition 2: a sincere heart</a></li>
+        <li><a href="#l2-peace">Two sources of peace</a></li>
+        <li><a href="#l2-feeling">The meditation feeling</a></li>
+        <li><a href="#l2-students">Student summaries</a></li>
+        <li><a href="#l2-sifu">Sifu's short summary</a></li>
+        <li><a href="#l2-quiz">Check your understanding</a></li>
+      </ol>
+    </div>
+    <div class="toc-card">
+      <span class="tag">Lesson 3</span>
+      <h3><a href="#lesson3">How to create a sincere heart</a></h3>
+      <ol>
+        <li><a href="#l3-summary">Summary</a></li>
+        <li><a href="#l3-causation">Causation</a></li>
+        <li><a href="#l3-systems">Two systems that limit us</a></li>
+        <li><a href="#l3-spiritual">Spiritual causation</a></li>
+        <li><a href="#l3-level1">Level 1: concentration</a></li>
+        <li><a href="#l3-level2">Level 2: wash, incense, bow</a></li>
+        <li><a href="#l3-homework">Homework</a></li>
+        <li><a href="#l3-words">Key words</a></li>
+        <li><a href="#l3-quiz">Check your understanding</a></li>
+      </ol>
+    </div>
+    <div class="toc-card">
+      <span class="tag">Lesson 4</span>
+      <h3><a href="#lesson4">What is suffering?</a></h3>
+      <ol>
+        <li><a href="#l4-summary">Summary</a></li>
+        <li><a href="#l4-om">The four sounds of Om</a></li>
+        <li><a href="#l4-modern">Argh = suffering: the modern way</a></li>
+        <li><a href="#l4-cycle">Buddhist way 1: birth, aging, illness, death</a></li>
+        <li><a href="#l4-blind">Buddhist way 2: blind birth, blind death</a></li>
+        <li><a href="#l4-poisons">Buddhist way 3: the three poisons</a></li>
+        <li><a href="#l4-oh">The bridge to Oh: where suffering comes from</a></li>
+        <li><a href="#l4-next">Coming later</a></li>
+        <li><a href="#l4-words">Key words</a></li>
+        <li><a href="#l4-quiz">Check your understanding</a></li>
+      </ol>
+    </div>
+    <div class="toc-card">
+      <span class="tag">Lesson 5</span>
+      <h3><a href="#lesson5">What is understanding?</a></h3>
+      <ol>
+        <li><a href="#l5-summary">Summary</a></li>
+        <li><a href="#l5-om">The four sounds of Om</a></li>
+        <li><a href="#l5-views">Why Sifu adds other views</a></li>
+        <li><a href="#l5-jobs">Oh = understanding: two jobs</a></li>
+        <li><a href="#l5-fix">Temporary fix and permanent fix</a></li>
+        <li><a href="#l5-stronger">The fix must be stronger than the suffering</a></li>
+        <li><a href="#l5-three">Three kinds of suffering today</a></li>
+        <li><a href="#l5-fear">Stress is fear</a></li>
+        <li><a href="#l5-devils">Fear and the four devils</a></li>
+        <li><a href="#l5-circle">The three kinds form a circle</a></li>
+        <li><a href="#l5-start">Where to start</a></li>
+        <li><a href="#l5-sides">Passive side and active side</a></li>
+        <li><a href="#l5-releasing">Is this already releasing?</a></li>
+        <li><a href="#l5-modern">Why modern people need the mantra</a></li>
+        <li><a href="#l5-next">Coming later</a></li>
+        <li><a href="#l5-words">Key words</a></li>
+        <li><a href="#l5-quiz">Check your understanding</a></li>
+      </ol>
+    </div>
+    <div class="toc-card">
+      <span class="tag">Lesson 6</span>
+      <h3><a href="#lesson6">Where suffering comes from: blind searching</a></h3>
+      <ol>
+        <li><a href="#l6-summary">Summary</a></li>
+        <li><a href="#l6-om">The four sounds of Om</a></li>
+        <li><a href="#l6-timing">Oh = understanding: two timings</a></li>
+        <li><a href="#l6-inside">Inside and outside</a></li>
+        <li><a href="#l6-searching">Blind searching</a></li>
+        <li><a href="#l6-wrong">What is wrong with searching?</a></li>
+        <li><a href="#l6-kinds">Two kinds of searching</a></li>
+        <li><a href="#l6-asking">Why Tim and GD keep asking</a></li>
+        <li><a href="#l6-awakening">Sifu's view: a global awakening</a></li>
+        <li><a href="#l6-ability">Understanding is not ability</a></li>
+        <li><a href="#l6-practice">How to practise</a></li>
+        <li><a href="#l6-next">Coming later</a></li>
+        <li><a href="#l6-words">Key words</a></li>
+        <li><a href="#l6-quiz">Check your understanding</a></li>
+      </ol>
+    </div>
+    <div class="toc-card">
+      <span class="tag">Lesson 7</span>
+      <h3><a href="#lesson7">Mmm: releasing suffering is compassion</a></h3>
+      <ol>
+        <li><a href="#l7-summary">Summary</a></li>
+        <li><a href="#l7-om">The four sounds of Om</a></li>
+        <li><a href="#l7-meaning">Mmm = releasing: what it means</a></li>
+        <li><a href="#l7-ego">Mmm = compassion: the ego kinds</a></li>
+        <li><a href="#l7-five">The five conditions of true compassion</a></li>
+        <li><a href="#l7-reincarnation">What is reincarnation?</a></li>
+        <li><a href="#l7-ways">Two ways the mantra helps you awaken</a></li>
+        <li><a href="#l7-how">How the mantra releases suffering</a></li>
+        <li><a href="#l7-changing">Suffering from changing</a></li>
+        <li><a href="#l7-worry">An example: worry</a></li>
+        <li><a href="#l7-joy">Joy is a gift you create</a></li>
+        <li><a href="#l7-levels">Releasing: temporary and eternal</a></li>
+        <li><a href="#l7-nirvana">A first look at Nirvana</a></li>
+        <li><a href="#l7-next">Coming later</a></li>
+        <li><a href="#l7-words">Key words</a></li>
+        <li><a href="#l7-quiz">Check your understanding</a></li>
+      </ol>
+    </div>
+    <div class="toc-card">
+      <span class="tag">Lesson 8</span>
+      <h3><a href="#lesson8">The full view: EFG (essence, function, goal)</a></h3>
+      <ol>
+        <li><a href="#l8-summary">Summary</a></li>
+        <li><a href="#l8-points">The full view in four points</a></li>
+        <li><a href="#l8-temporary">Temporary awakening</a></li>
+        <li><a href="#l8-eternal">Eternal awakening</a></li>
+        <li><a href="#l8-mani">Ma Ni: the wisdom jewel</a></li>
+        <li><a href="#l8-beime">Bei Me: the lotus</a></li>
+        <li><a href="#l8-hong">Hong: the graduated consciousness</a></li>
+        <li><a href="#l8-efg">EFG: essence, function, goal</a></li>
+        <li><a href="#l8-double">Double awakening</a></li>
+        <li><a href="#l8-qa">Questions and answers</a></li>
+        <li><a href="#l8-examples">EFG: a cup and an iPhone</a></li>
+        <li><a href="#l8-human">EFG: a human</a></li>
+        <li><a href="#l8-closing">Closing: consciousness is already eternal</a></li>
+        <li><a href="#l8-words">Key words</a></li>
+        <li><a href="#l8-quiz">Check your understanding</a></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<div class="lesson-band" id="lesson1">
+  <span class="eyebrow">Lesson 1 · 27 September 2026</span>
+  <h2>The meaning</h2>
+  <p>What each part of the mantra means, why the mantra is not religious, and why understanding beats blind belief.</p>
+</div>
+
+<section id="summary">
+  <h2>Summary</h2>
+  <div class="summary flow">
+    <p>Om Mani Padme Hom is a mantra in four parts: Om, Ma Ni, Bei Me and Hong. The four parts trace a path. You start in suffering. You understand life. You purify your heart. You wake up.</p>
+    <ul>
+      <li><b>Om</b> has four sounds: suffering, understanding, freedom from suffering, and a quiet, content heart.</li>
+      <li><b>Ma Ni</b> is the wisdom jewel: your essence, which has no form, no birth and no end.</li>
+      <li><b>Bei Me</b> is the lotus: a heart that grows out of the mud of blind intention and comes out clean.</li>
+      <li><b>Hong</b> is awakened consciousness. An awakened consciousness never goes back to blindness.</li>
+    </ul>
+    <p>The mantra is not religious. The mantra is a training tool, a guide, a protection and a sound wave. The sound itself changes your heart, on top of the meaning.</p>
+    <p>Saying the mantra only to feel safe is blind belief, and blind belief does not remove fear. Understanding removes fear. First, understand your essence: your awareness is not the body or the "I" it is aware of. Second, understand that a perfect consciousness made the mantra out of pure kindness. That understanding gives wisdom trust, and wisdom trust gives real joy and safety.</p>
+  </div>
+</section>
+
+<section id="names">
+  <h2>The names</h2>
+  <p>Sifu says the mantra the Chinese way. Most English books spell it the Sanskrit way. This course writes the mantra as Om Mani Padme Hom.</p>
+  <div class="tablewrap"><table>
+    <thead><tr><th>Part</th><th>Chinese</th><th>How Sifu says it</th><th>Most English books</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td class="han">嗡</td><td>Om</td><td>Om</td></tr>
+      <tr><td>2</td><td class="han">嘛呢</td><td>Ma Ni</td><td>Mani</td></tr>
+      <tr><td>3</td><td class="han">叭咪</td><td>Bei Me</td><td>Padme</td></tr>
+      <tr><td>4</td><td class="han">吽</td><td>Hong</td><td>Hum</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section id="parts">
+  <h2>The four parts</h2>
+  <p class="hint">Tap a part to read more.</p>
+  <div class="path" id="pathList"></div>
+</section>
+
+<section id="om">
+  <h2>Om has four sounds</h2>
+  <p>Sifu splits Om into four sounds. The four sounds follow in order.</p>
+  <div class="sounds">
+    <div class="sound"><span class="n">Sound 1</span><h3>Argh</h3><p>Suffering.</p></div>
+    <div class="sound"><span class="n">Sound 2</span><h3>Oh</h3><p>Understanding. Not small things. Understanding life.</p></div>
+    <div class="sound"><span class="n">Sound 3</span><h3>Mm</h3><p>Free from suffering. Understanding life lets you help yourself and others out of suffering. Sifu calls this healing.</p></div>
+    <div class="sound"><span class="n">Sound 4</span><h3>Silent</h3><p>Content. Free from suffering, the heart is quiet, joyful and smiling.</p></div>
+  </div>
+  <p class="note">Om has a second use. People say Om to begin meditation, to begin another mantra, or to bow to a Buddha or Bodhisattva. Used this way, Om means: "My heart is open and sincere. I want to learn complete wisdom and complete compassion."</p>
+</section>
+
+<section id="words">
+  <h2>Key words</h2>
+  <div class="row">
+    <span class="hint">Tap a card to see the meaning.</span>
+    <button class="btn" id="flipAll" type="button">Show all meanings</button>
+  </div>
+  <div class="cards" id="cards"></div>
+</section>
+
+<section id="topics">
+  <h2>Topics</h2>
+  <div class="row"><button class="btn" id="toggleAll" type="button">Close all topics</button></div>
+
+  <details open>
+    <summary>Who Sifu is, and why study Dharma</summary>
+    <div class="body">
+      <p>Sifu has given his life to three questions. What is life? How do we get free from suffering? How do we get free of birth, aging, illness and death?</p>
+      <p>Sifu teaches healing, stretching, acupuncture, dry needling, Yi Jin Jing and tai chi. Sifu also teaches Buddhist philosophy, to give a complete view of life. The complete view of life is Dharma.</p>
+      <p>With a complete view of life, you stop acting from blind intention. With no blind intention, you stop creating blind suffering, for yourself and for others.</p>
+    </div>
+  </details>
+
+  <details open>
+    <summary>Many explanations</summary>
+    <div class="body">
+      <p>Sifu says the mantra has many explanations. Sifu does not say the others are wrong. The explanation Sifu teaches is not his own. Sifu learned it.</p>
+      <p>Sifu teaches this explanation for two reasons:</p>
+      <ol>
+        <li>The meaning and the function fit together perfectly.</li>
+        <li>The explanation purifies Sifu's consciousness, and shows him the complete system of life.</li>
+      </ol>
+    </div>
+  </details>
+
+  <details open>
+    <summary>Say Hong, not Om</summary>
+    <div class="body">
+      <p>The last word is a different word from the first. Om opens the mantra. Hong closes the mantra.</p>
+      <p class="note">Sifu's memory aid: Hong is the feeling of waking up.</p>
+    </div>
+  </details>
+
+  <details open>
+    <summary>Is the mantra religious?</summary>
+    <div class="body">
+      <p>No. Sifu's points:</p>
+      <ul>
+        <li>Buddhism is not a religion. People turned Buddhism into a religion.</li>
+        <li>In the Buddha's time, India had more than 1,000 religions. The Buddha tried to help people free themselves from religion.</li>
+        <li>The Buddha taught the true force of life: your awareness power. Without awareness power, you have no life.</li>
+        <li>Awareness power can be blind. Blind awareness power creates suffering, reincarnation, birth, aging, illness and death.</li>
+        <li>Your essence has no form, so your essence is already eternal.</li>
+        <li>The mantra helps you understand all of this. The mantra has nothing to do with any religion, not even Buddhism.</li>
+      </ul>
+    </div>
+  </details>
+
+  <details open>
+    <summary>Why the sound matters</summary>
+    <div class="body">
+      <p>Tim asked if the mantra is a training tool. Sifu agreed. The mantra is a training tool, a guide, a protection and a sound wave.</p>
+      <ul>
+        <li>A noisy place makes you nervous.</li>
+        <li>Birdsong, gentle wind, ocean waves, a river or a waterfall make you feel joyful.</li>
+      </ul>
+      <p>Om Ma Ni Bei Me Hong is a sound wave made by a perfect consciousness. So the sound itself affects your heart, on top of the wisdom in its meaning.</p>
+    </div>
+  </details>
+
+  <details open>
+    <summary>Fear, blind belief and wisdom trust</summary>
+    <div class="body">
+      <p class="note">GD asked about saying Om when you feel afraid, or in a nightmare. GD recalled that if you put your whole heart into saying Om, and think of nothing else, Om can calm your heart and even change the situation. Sifu said a deep wisdom sits behind the answer, and Sifu will explain it next time. Sifu answered GD's question in <a href="#lesson2">Lesson 2</a>.</p>
+      <h3>What does not work</h3>
+      <p>Saying the mantra only to feel comfort or safety is blind belief. Blind belief is a wish. A wish does not mean you get what you wish for. The fear stays.</p>
+      <h3>What works: two layers of understanding</h3>
+      <p>When you understand the wisdom, you surely receive peace. You can also create peace yourself.</p>
+      <div class="layer">
+        <p><b>Layer 1: understand your essence.</b></p>
+        <ul>
+          <li>Your awareness power is not the things you are aware of. Sifu: "A aware B, A is not B."</li>
+          <li>The mantra helps you understand your essence.</li>
+          <li>In meditation, you return to your essence. You stop connecting to the body.</li>
+          <li>When you stop connecting to the body, the "I" disappears. Any fear the "I" has disappears with the "I."</li>
+          <li>You then see life as a game: a journey to learn, share, develop and experience. You stop taking life too seriously.</li>
+          <li>Fear and worry come from taking this temporary character, the "I," too seriously.</li>
+        </ul>
+      </div>
+      <div class="layer">
+        <p><b>Layer 2: understand where the mantra came from.</b></p>
+        <ul>
+          <li>A perfect consciousness made the mantra.</li>
+          <li>That consciousness shared the mantra out of pure kindness, to help us.</li>
+          <li>When you understand that intention, you trust it.</li>
+          <li>That trust is not blind belief. That trust comes from understanding the wisdom. Sifu calls it wisdom trust.</li>
+          <li>An awakened consciousness has no ego. An awakened consciousness only wants to help and protect every life.</li>
+          <li>Understanding both layers gives you a deep protection, and real joy and safety.</li>
+        </ul>
+      </div>
+    </div>
+  </details>
+
+  <details open>
+    <summary>Closing dedication</summary>
+    <div class="body">
+      <p>Sifu chanted Om, then led the class in this line. Repeat it at the end of practice:</p>
+      <p class="mantra">May my heart share all the wisdom and compassion to every life.</p>
+    </div>
+  </details>
+
+  <details open>
+    <summary>Answered in Lesson 2</summary>
+    <div class="body">
+      <p class="answered">How saying the mantra helps when you feel afraid. Sifu answered this question in <a href="#lesson2">Lesson 2</a>.</p>
+    </div>
+  </details>
+</section>
+
+<section id="quiz">
+  <h2>Check your understanding</h2>
+  <div class="row">
+    <span class="score" id="score">0 of 11 answered · 0 correct</span>
+    <button class="btn" id="reset" type="button">Start again</button>
+  </div>
+  <div id="quizList" class="flow"></div>
+</section>
+
+<div class="lesson-band two" id="lesson2">
+  <span class="eyebrow">Lesson 2 · 4 October 2026 · Follow-up class</span>
+  <h2>How to make the mantra work</h2>
+  <p>Sifu answers GD's question from Lesson 1: can saying the mantra remove fear and protect you?</p>
+</div>
+
+<section id="l2-summary">
+  <h2>Summary</h2>
+  <div class="summary flow">
+    <p>GD asked in Lesson 1: can saying Om remove fear and protect you? Sifu's answer: a mantra works when you have two things.</p>
+    <ul>
+      <li><b>Condition 1:</b> understand the meaning.</li>
+      <li><b>Condition 2:</b> have a sincere heart.</li>
+    </ul>
+    <p>Either condition alone already works. Both conditions together surely work. Without either condition, saying the mantra is only a wish.</p>
+  </div>
+</section>
+
+<section id="l2-meaning">
+  <h2>Condition 1: understand the meaning</h2>
+  <p>Sifu ran through the four parts again, as one path.</p>
+  <div class="tablewrap"><table>
+    <thead><tr><th>Part</th><th>Chinese</th><th>What the part does</th></tr></thead>
+    <tbody>
+      <tr><td class="part">Om</td><td class="han">嗡</td><td>Life has suffering. Wisdom lets you see the system of life, release the roots of suffering, and return to content and joy.</td></tr>
+      <tr><td class="part">Ma Ni</td><td class="han">嘛呢</td><td>The wisdom that makes this happen.</td></tr>
+      <tr><td class="part">Bei Me</td><td class="han">叭咪</td><td>The lotus. Wisdom purifies blindness, and blindness is the root of suffering.</td></tr>
+      <tr><td class="part">Hong</td><td class="han">吽</td><td>The awakened consciousness.</td></tr>
+    </tbody>
+  </table></div>
+  <p>The four parts give a basic map. Living the map takes much more wisdom.</p>
+  <p class="note">Sifu: anyone curious about the meaning can go back to the first video. The first video is <a href="#lesson1">Lesson 1</a> on this page.</p>
+</section>
+
+<section id="l2-heart">
+  <h2>Condition 2: a sincere heart</h2>
+  <ul class="plain">
+    <li>You do not need every detail of the wisdom.</li>
+    <li>A sincere heart begins when your heart sees that freedom from suffering is possible, and truly wants freedom from suffering.</li>
+    <li>Hold one heart and one intention.</li>
+  </ul>
+  <p class="mantra">"I truly want to wake up. I want to be out of blindness and suffering. I want to share the wisdom to help others."</p>
+  <ul class="plain">
+    <li>Saying the mantra with that intention makes a connection.</li>
+    <li>Your heart feels peace right away.</li>
+  </ul>
+</section>
+
+<section id="l2-peace">
+  <h2>Two sources of peace</h2>
+  <div class="pair">
+    <div class="pane">
+      <span class="n">Your own power</span>
+      <ul>
+        <li>You want to grow toward wisdom.</li>
+        <li>Growing toward wisdom brings joy and peace.</li>
+      </ul>
+    </div>
+    <div class="pane">
+      <span class="n">Their power</span>
+      <ul>
+        <li>The awakened ones who made the mantra already have complete wisdom.</li>
+        <li>The awakened ones watch over you and want to help.</li>
+        <li>Knowing this makes you feel safe and free.</li>
+      </ul>
+    </div>
+  </div>
+  <p>With both in mind, your heart becomes pure, joyful, peaceful and free as you say the mantra.</p>
+</section>
+
+<section id="l2-feeling">
+  <h2>The meditation feeling</h2>
+  <p>Sifu says a sincere heart takes you straight into the meditation feeling.</p>
+  <ul class="plain">
+    <li>While you say the sounds, you stop thinking about yourself.</li>
+    <li>You feel the sound and the vibration, and you follow the meaning.</li>
+    <li>Your heart fills with thanks.</li>
+    <li>True peace and true wisdom appear.</li>
+  </ul>
+</section>
+
+<section id="l2-students">
+  <h2>Student summaries</h2>
+  <p>Sifu asked GD and Tim to sum up what they heard.</p>
+  <div class="voice">
+    <span class="who">GD</span>
+    <ul>
+      <li>Understanding the meaning opens your heart toward wisdom and compassion.</li>
+      <li>The awakened ones who made the mantra want to help blind ones like us.</li>
+      <li>Your will and their will meet, and the two wills make the connection.</li>
+      <li>Your heart calms, in place of the fear and worry of the "I".</li>
+    </ul>
+  </div>
+  <div class="voice">
+    <span class="who">Tim</span>
+    <ul>
+      <li>A mantra is not a spell. Saying the words does not force anything.</li>
+      <li>Your heart has to take in how the awakened ones see life. Only then does the mantra connect.</li>
+      <li>Sifu said Tim gave an explanation, not a summary.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="l2-sifu">
+  <h2>Sifu's short summary</h2>
+  <p>To make a mantra work:</p>
+  <ol class="steps">
+    <li><span>Understand the meaning.</span></li>
+    <li><span>Follow the meaning.</span></li>
+    <li><span>Understand that the consciousness who made such a perfect meaning has perfect power, and surely wants to share and protect us.</span></li>
+  </ol>
+  <p class="note">Sifu's close: the mantra is a quick way for everyone to find peace and wisdom.</p>
+</section>
+
+<section id="l2-quiz">
+  <h2>Check your understanding</h2>
+  <div class="row">
+    <span class="score" id="score2">0 of 5 answered · 0 correct</span>
+    <button class="btn" id="reset2" type="button">Start again</button>
+  </div>
+  <div id="quizList2" class="flow"></div>
+</section>
+
+<div class="lesson-band three" id="lesson3">
+  <span class="eyebrow">Lesson 3 · 11 October 2026</span>
+  <h2>How to create a sincere heart</h2>
+  <p>Tim asks how a student at home starts to practise. Sifu explains causation, then gives the first two levels of a sincere heart.</p>
+</div>
+
+<section id="l3-summary">
+  <h2>Summary</h2>
+  <div class="summary flow">
+    <p>Tim asked: how does a student at home, who may never have heard the mantra, start to practise? Sifu first recapped Lesson 2. A mantra works when you have two things: you understand the meaning, and you have a sincere heart. Lesson 3 covers the sincere heart.</p>
+    <ul>
+      <li><b>Causation:</b> nothing comes from one cause. Many causes join into a result, and each result becomes a new cause.</li>
+      <li><b>Blind causation:</b> normal life runs on "I and mine". This causation keeps us inside two systems: birth, aging, illness and death, and appear, develop, destroy and disappear. Going round again and again is reincarnation.</li>
+      <li><b>Spiritual causation:</b> singing the mantra sincerely makes a different kind of causation. Spiritual causation comes from an eternal force of wisdom and compassion, not from "I and mine".</li>
+      <li><b>Level 1:</b> listen to every sound you say or sing.</li>
+      <li><b>Level 2:</b> wash, light incense, and bow to the statue of the Bodhisattva who made the mantra.</li>
+    </ul>
+    <p>Sifu: you do not need to understand causation before you start to practise. Start with Level 1.</p>
+  </div>
+</section>
+
+<section id="l3-causation">
+  <h2>Causation</h2>
+  <ul class="plain">
+    <li>Causation means nothing happens without many things joining together.</li>
+    <li>One cause alone gives no result. One cause alone stays the same.</li>
+    <li>Many causes join together, and finally become a result.</li>
+    <li>The result then joins other causes as one cause, and makes a new result.</li>
+    <li>The chain never ends. We experience life through this chain.</li>
+  </ul>
+  <p>Sifu's example: the river.</p>
+  <ol class="chain" aria-label="The river example, in order">
+    <li>Raindrops, ground water, mountain streams</li>
+    <li>The river</li>
+    <li>The ocean</li>
+  </ol>
+  <p>One drop of water stays one drop. Many drops, plus water from under the ground and streams from the mountains, join into a river. The river is the result. The river then becomes a cause, and flows into the ocean with every other river.</p>
+</section>
+
+<section id="l3-systems">
+  <h2>Two systems that limit us</h2>
+  <p>Normal life causation comes from trying to survive. Normal life causation looks at life from the ego: what is good for me, and what I want. Sifu calls this "I and mine". Our experience of life is limited by two systems.</p>
+  <div class="pair">
+    <div class="pane">
+      <span class="n">Life-consciousness system</span>
+      <p>Consciousness connects to a body. The body goes through four stages.</p>
+      <ol class="chain"><li>Birth</li><li>Aging</li><li>Illness</li><li>Death</li></ol>
+    </div>
+    <div class="pane">
+      <span class="n">Space-and-time system</span>
+      <p>A consciousness in a body experiences space. Everything in space goes through four stages.</p>
+      <ol class="chain"><li>Appear</li><li>Develop</li><li>Destroy</li><li>Disappear</li></ol>
+    </div>
+  </div>
+  <ul class="plain">
+    <li>We have to follow both systems. Both systems run on blind, survival causation.</li>
+    <li><b>Reincarnation:</b> blind causation pulls our consciousness through birth and death again and again.</li>
+    <li><b>Karma:</b> causation that joins together and becomes the next lifetime.</li>
+  </ul>
+</section>
+
+<section id="l3-spiritual">
+  <h2>Spiritual causation</h2>
+  <ul class="plain">
+    <li>Singing the mantra sincerely creates causation, but not normal life causation.</li>
+    <li>The mantra is an eternal force. The mantra does not come from "I and mine", and does not come from anyone's causation.</li>
+    <li>The mantra comes from a being with two qualities.</li>
+  </ul>
+  <div class="pair">
+    <div class="pane gold">
+      <span class="n">Wisdom</span>
+      <p>A completely open heart that understands life.</p>
+    </div>
+    <div class="pane gold">
+      <span class="n">Compassion</span>
+      <p>Wanting to help others understand life, leave suffering, and feel joy without limit.</p>
+    </div>
+  </div>
+  <ul class="plain">
+    <li>An awakened consciousness with this power made the mantra. When we learn the mantra, we move the same way.</li>
+    <li>When you are sincere, aware of the mantra and sing the mantra, you create <b>Dharma spiritual causation</b> right away.</li>
+    <li>Dharma spiritual causation is outside the survival cycle of birth, aging, illness and death. Dharma spiritual causation is not reincarnation causation.</li>
+    <li>Since causation that becomes the next lifetime is karma, Sifu also calls this <b>spiritual karma</b>. Singing or saying the mantra sincerely is all spiritual karma.</li>
+  </ul>
+  <p class="note">Tim and Sifu: you do not need to understand causation or the two systems right now. Take notes if you like, and start to practise. The sincere heart has the most direct effect.</p>
+</section>
+
+<section id="l3-level1">
+  <h2>Level 1: concentration</h2>
+  <p>Level 1 of a sincere heart is concentration. Listen to what you say.</p>
+  <ul class="plain">
+    <li>As you say or sing Om Mani Padme Hom, hear every sound exactly.</li>
+    <li>Listening stops the thinking, or at least stops nonsense thinking from controlling you.</li>
+    <li>Do not try to stop thinking. Sifu says Buddhism sees thinking as a river or a waterfall with no break. Wanting to stop thinking is like taking a knife to cut a waterfall. Wanting to stop thinking does not work.</li>
+    <li>Do not worry whether you say the mantra correctly. Worry is more thinking.</li>
+    <li>Do not try to hold everything you have learned about the mantra while you say the mantra. Holding every detail starts the thinking again.</li>
+    <li>Just enjoy listening to your own voice. If you enjoy listening, you have already reached Level 1.</li>
+  </ul>
+  <div class="answered">Singing works better than saying. Singing has rhythm, melody and tone, and rhythm, melody and tone hold your attention even more.</div>
+  <p>Level 1 helps everyone, and connects you right away to the spiritual causation of the mantra.</p>
+</section>
+
+<section id="l3-level2">
+  <h2>Level 2: wash, incense, bow</h2>
+  <p>Level 2 of a sincere heart: wash, light incense, and bow to the statue of Thousand Hands, Thousand Eyes Observing Life Sound Bodhisattva. The Chinese phrase for the first two steps is <span class="han">沐浴焚香</span>: bathe and burn incense, a way to show sincerity.</p>
+  <ol class="steps">
+    <li><span>Wash.</span></li>
+    <li><span>Light incense.</span></li>
+    <li><span>Bow to the statue.</span></li>
+  </ol>
+  <h3>Why this statue</h3>
+  <p>Observing Life Sound Bodhisattva made the mantra. Thousand Hands, Thousand Eyes Observing Life Sound Bodhisattva is the same consciousness.</p>
+  <ul class="plain">
+    <li>At the moment of becoming a Buddha, the Bodhisattva made a will to help every life.</li>
+    <li>The Bodhisattva observes every life, so a thousand eyes appear in the hands.</li>
+    <li>The Bodhisattva helps everyone, so a thousand hands appear.</li>
+  </ul>
+  <div class="tablewrap"><table>
+    <thead><tr><th>Sifu's name</th><th>Chinese</th><th>Common names</th></tr></thead>
+    <tbody>
+      <tr><td>Observing Life Sound Bodhisattva</td><td class="han">觀世音菩薩</td><td>Guanyin (Chinese), Avalokiteshvara (Sanskrit)</td></tr>
+      <tr><td>Thousand Hands, Thousand Eyes Observing Life Sound Bodhisattva</td><td class="han">千手千眼觀世音菩薩</td><td>Thousand-armed Guanyin</td></tr>
+    </tbody>
+  </table></div>
+  <h3>The drought story</h3>
+  <p>Many people in Chinese history saw Observing Life Sound Bodhisattva, often holding a vase of water. Sifu told one story. Sifu said the story has more than one version.</p>
+  <ol class="steps">
+    <li><span>Many places in China had no rain for a long time. Plants almost died. People had no food or water, and feared death. Nothing they tried worked.</span></li>
+    <li><span>Observing Life Sound Bodhisattva appeared as an old lady, and told people to bow to Observing Life Sound Bodhisattva. Nobody understood or trusted the Bodhisattva yet.</span></li>
+    <li><span>One person had heard a Buddhist describe the Bodhisattva as completely kind, completely caring, with an eternal heart that wants to help every life. That person was sure the Bodhisattva would help.</span></li>
+    <li><span>That person sat in meditation and bowed under the sun for three days. Other people did not believe, and laughed.</span></li>
+    <li><span>At the limit of what the person could bear, the person called out: "Please appear and show that your kind heart is real. I am truly sincere."</span></li>
+    <li><span>The Bodhisattva appeared, and heavy rain covered the whole area. Many people saw the Bodhisattva. The Bodhisattva's form became the statue, and many more people came to know the Bodhisattva.</span></li>
+  </ol>
+  <p>Stories like this happened many times, so the statue is very famous in China. The Bodhisattva created the mantra, so you bow to this statue.</p>
+  <p class="note">A higher level, for later: Tim guessed that Level 2 is energy rising from the spring point (<span class="han">湧泉</span>, a point on the sole of the foot), through the body, to Bai Hui (<span class="han">百會</span>, the point on top of the head). Sifu said that is a much higher level, and too big a jump for Level 2.</p>
+</section>
+
+<section id="l3-homework">
+  <h2>Homework</h2>
+  <p>Practise Level 1: listen to every sound as you sing.</p>
+  <ol class="steps">
+    <li><span>Sing along with the sung version of the mantra. Singing beats saying.</span></li>
+    <li><span>Each sung round holds the mantra four times. Sing 2 or 3 rounds: 8 or 12 times in all. You do not need the full 25-minute session.</span></li>
+    <li><span>Hear every sound you sing. Sifu says 8 or 12 times with every sound heard is already a high standard for Level 1.</span></li>
+    <li><span>Do not count. Asking "Have I done 8, 9 or 12?" is more thinking, and the count does not matter.</span></li>
+  </ol>
+</section>
+
+<section id="l3-words">
+  <h2>Key words</h2>
+  <div class="row">
+    <span class="hint">Tap a card to see the meaning.</span>
+    <button class="btn" id="flipAll3" type="button">Show all meanings</button>
+  </div>
+  <div class="cards" id="cards3"></div>
+</section>
+
+<section id="l3-quiz">
+  <h2>Check your understanding</h2>
+  <div class="row">
+    <span class="score" id="score3">0 of 6 answered · 0 correct</span>
+    <button class="btn" id="reset3" type="button">Start again</button>
+  </div>
+  <div id="quizList3" class="flow"></div>
+</section>
+
+<div class="lesson-band four" id="lesson4">
+  <span class="eyebrow">Lesson 4 · 18 October 2026</span>
+  <h2>What is suffering?</h2>
+  <p>The first sound of Om is Argh, and Argh means suffering. This class explains suffering: the modern way, then three Buddhist ways. At the end, Sifu starts on the second sound, Oh: where suffering comes from.</p>
+</div>
+
+<section id="l4-summary">
+  <h2>Summary</h2>
+  <div class="summary flow">
+    <p>The first sound of Om is Argh. Argh means suffering. This class explains suffering.</p>
+    <p>Lesson 2 gave two conditions for the mantra to work: understand the meaning, and have a sincere heart. Lesson 3 covered the sincere heart. Lesson 4 goes back to the meaning.</p>
+    <ul>
+      <li><b>Argh = suffering, the modern way:</b> suffering comes in three kinds. Physical suffering is pain. Mental suffering is worry. Psychological suffering, or stress, is fear.</li>
+      <li><b>Argh = suffering, the Buddhist way, part 1:</b> birth, aging, illness and death. Each stage of the cycle is suffering.</li>
+      <li><b>Argh = suffering, the Buddhist way, part 2:</b> blind birth and blind death. Where does birth come from? Something comes before the cycle. We do not know why we were born, or when we will die. A blind life leads to a blind next life, and the whole cycle repeats. That is reincarnation.</li>
+      <li><b>Argh = suffering, the Buddhist way, part 3:</b> the three poison consciousness. We create our own desire for "I and mine", and that desire is greed. Greed creates comparing. Comparing becomes hate. Hate creates stupidity. We create every step ourselves.</li>
+      <li><b>The bridge to Oh, the second sound of Om:</b> suffering is an effect, and every effect comes from a cause. Our own blind action creates the cause.</li>
+    </ul>
+    <p>All of this is only the first sound of Om. Om is the first of six syllables in Om Mani Padme Hom. That shows how much wisdom sits inside this one mantra.</p>
+  </div>
+</section>
+
+<section id="l4-om">
+  <h2>The four sounds of Om</h2>
+  <p>A recap from Lesson 1. Om holds four sounds, in order. Together the four sounds trace the cycle of life, from suffering to emptiness.</p>
+  <div class="sounds">
+    <div class="sound"><span class="n">Sound 1</span><h3>Argh</h3><p>Suffering. Say it strong and active, so it sounds like suffering.</p></div>
+    <div class="sound"><span class="n">Sound 2</span><h3>Oh</h3><p>Understanding suffering, and how to release it.</p></div>
+    <div class="sound"><span class="n">Sound 3</span><h3>Mmm</h3><p>Releasing. Like the sound after a great massage.</p></div>
+    <div class="sound"><span class="n">Sound 4</span><h3>Silence</h3><p>Empty, Nirvana, joy, content. All suffering released, back to emptiness.</p></div>
+  </div>
+  <p class="note">Mmm in Buddhism is more than ordinary relief. "Argh, I hurt my hand," then the pain fades: that is human relief. Buddhist Mmm is complete freedom from suffering, and freedom from being trapped in reincarnation. The course reaches Mmm and Silence later.</p>
+</section>
+
+<section id="l4-modern">
+  <h2>Argh = suffering: the modern way</h2>
+  <p class="lede">Three kinds of suffering.</p>
+  <p>Everyone knows the word suffering. Nobody looks at suffering as closely as Buddhist philosophy does.</p>
+  <div class="trio">
+    <div class="pane indigo"><span class="n">Physical</span><p>Pain.</p></div>
+    <div class="pane indigo"><span class="n">Mental</span><p>Worry.</p></div>
+    <div class="pane indigo"><span class="n">Psychological</span><p>Stress, which we feel as fear.</p></div>
+  </div>
+  <p>This modern way is Sifu's own explanation. The Buddha did not say it this way. The modern way is still true, because it matches the Dharma.</p>
+  <p class="note">The Buddha said everything he taught in his whole life was like a little dirt under a fingernail. Compare that dirt to the whole person: from the dirt alone, you cannot know who the person is. In the same way, what the Buddha taught is one little part of all Dharma. Everything the Buddha taught is true. So any new explanation is fine, as long as it matches what the Buddha taught.</p>
+</section>
+
+<section id="l4-cycle">
+  <h2>Argh = suffering: the Buddhist way, part 1</h2>
+  <p class="lede">Birth, aging, illness, death.</p>
+  <p>The first Buddhist way to see suffering is the cycle of four. Each stage is suffering in itself.</p>
+  <ol class="chain" aria-label="The cycle of four, in order"><li>Birth</li><li>Aging</li><li>Illness</li><li>Death</li></ol>
+
+  <h3>Birth</h3>
+  <ul class="plain">
+    <li>Birth is suffering for the mum and for the baby.</li>
+    <li>A baby is sensitive. Everything about a baby is fragile and delicate.</li>
+  </ul>
+
+  <h3>Aging</h3>
+  <p>Aging starts the day we start to grow up. Growing up means handling change, and change brings suffering.</p>
+  <div class="pair">
+    <div class="pane">
+      <span class="n">The mind: comparing</span>
+      <ul>
+        <li>Kids must learn many new things. Kids compare: who learns faster, who is stronger. Fall behind, and you feel stupid and afraid.</li>
+        <li>Adults compare too: a better job, more pay. Comparing is a constant stress.</li>
+        <li>There is always something to make us suffer.</li>
+      </ul>
+    </div>
+    <div class="pane">
+      <span class="n">The body: growing and wearing out</span>
+      <ul>
+        <li>Teeth grow, and bones grow. Growing hurts.</li>
+        <li>Teenage years bring pimples.</li>
+        <li>Old age brings stiffness. Organs and nerves stop working. Some old people need diapers or a wheelchair, unless they learn wisdom to stay young and lively.</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>Habit: black hole or big bang</h3>
+  <p>Old people get stuck in worry habits. We create our own habits, so we choose which way a habit grows.</p>
+  <div class="pair">
+    <div class="pane miss"><span class="n">Black hole</span><p>A habit in the wrong direction. Once you are in it, it grows bigger and bigger, and pulls you in further.</p></div>
+    <div class="pane"><span class="n">Big bang</span><p>A habit in the right direction. Open and expanding. It covers every part of life, and makes us healthier, happier and wiser.</p></div>
+  </div>
+
+  <h3>The sharp student: wisdom can bring suffering too</h3>
+  <ul class="plain">
+    <li>A slow student learns to be sharp, to observe. Sharpness helps that student's life.</li>
+    <li>Sifu told one sharp student: you see the mistakes other people make. That is good. You are wiser than them.</li>
+    <li>But if you follow the sharpness everywhere, to everyone and everything, the side effect is anger and complaining. You feel bad. That is a black hole, and Sifu calls it blind habit.</li>
+    <li>The student did not want that, and chose to change.</li>
+  </ul>
+  <p class="note">Learning wisdom one time is not enough, because life is complex. Wisdom needs harmony and timing. Showing your sharpness in a kind, harmonious way is a separate wisdom, and not easy. Sifu says he has the same problem: his sharpness wants to help people learn, but everyone is at a different level, with a different character. Learning wisdom is a subject for the heart. We can spend our whole life on it.</p>
+
+  <h3>Stress that never ends</h3>
+  <ul class="plain">
+    <li>When young, we think: "Once I finish this, life will be great." That day never comes.</li>
+    <li>There is always more to learn. Whatever we learn never feels enough, and we can never fall behind.</li>
+    <li>The mind starts to believe there is no end. People turn bitter and depressed, and lose joy in the future.</li>
+    <li>Many smiles hide this suffering. The smile is friendly, but inside is suffering.</li>
+  </ul>
+  <div class="answered">A better view of life: enjoy what you have learned, and appreciate what you have learned. Stay humble too, because there is more to learn.</div>
+
+  <h3>Illness and death</h3>
+  <p>Too much suffering from birth and aging leads to illness. Worry and stress settle into the body and block it.</p>
+  <ol class="chain" aria-label="How worry becomes illness and death, in order"><li>Worry and stress</li><li>Blockage in the body</li><li>Nerves tense</li><li>Blood cannot flow</li><li>Organs fail</li><li>Death</li></ol>
+  <ul class="plain">
+    <li>Someone who worries all the time gets bad skin, and breathing and blood flow problems.</li>
+    <li>Blood brings food to every organ, and clears the waste out. When blood cannot flow, organs cannot work or clean themselves, and they fail.</li>
+    <li>So aging finally becomes death.</li>
+  </ul>
+  <p class="note">The two ways join here. Birth, aging, illness and death are still physical, mental and psychological suffering. Sifu gave the detail to make that link clear.</p>
+</section>
+
+<section id="l4-blind">
+  <h2>Argh = suffering: the Buddhist way, part 2</h2>
+  <p class="lede">Blind birth, blind death. Where does birth come from?</p>
+  <p>Part 1 looked at the cycle of birth, aging, illness and death. Part 2 asks what comes before the cycle. Birth has a cause, like everything else. Birth is not only mum's egg and dad's sperm. Consciousness has to come from somewhere, and we do not understand how we connect to our past life.</p>
+  <div class="pair">
+    <div class="pane gold"><span class="n">Blind birth</span><p>We are born into this human body without knowing how or why.</p></div>
+    <div class="pane gold"><span class="n">Blind death</span><p>We will surely die, without knowing when or how.</p></div>
+  </div>
+  <ul class="plain">
+    <li>If this life happens blindly, how could the next life not happen blindly? No chance.</li>
+    <li>Life keeps happening blindly, and the whole cycle of birth, aging, illness and death repeats. That is reincarnation.</li>
+    <li>Om Mani Padme Hom holds the answer for how to clean this out.</li>
+  </ul>
+</section>
+
+<section id="l4-poisons">
+  <h2>Argh = suffering: the Buddhist way, part 3</h2>
+  <p class="lede">The three poison consciousness: greed, hate, stupidity.</p>
+  <p>Buddhism has many more ways to explain suffering. Part 3 is the three poison consciousness. Each poison grows out of the one before, and we create every step ourselves.</p>
+  <ol class="chain" aria-label="How the three poisons grow, in order"><li>Our desire for I and mine</li><li>Greed</li><li>Comparing</li><li>Hate</li><li>Stupidity</li></ol>
+  <ul class="plain">
+    <li>We create our own desire for "I and mine". That desire is greed.</li>
+    <li>Greed creates comparing: what I have against what others have.</li>
+    <li>Comparing becomes hate.</li>
+    <li>Hate creates stupidity.</li>
+  </ul>
+
+  <h3>Greed</h3>
+  <p>Greed brings suffering at every stage.</p>
+  <ol class="steps">
+    <li><span>Chasing it: suffering.</span></li>
+    <li><span>Getting it, and finding it is not as good as you hoped: suffering.</span></li>
+    <li><span>Fearing you will lose it: suffering.</span></li>
+    <li><span>Fearing you cannot keep it: suffering.</span></li>
+    <li><span>Seeing other people with something better, so yours is no longer good enough: suffering. Comparing makes greed grow.</span></li>
+  </ol>
+  <h3>Dealing with people</h3>
+  <ul class="plain">
+    <li>Dealing with people is suffering, because each of us has an ego: "I and mine".</li>
+    <li>When what we are is compared with other people, we suffer.</li>
+    <li>When other people want what we want, we compete, and we suffer.</li>
+    <li>Our greed meets other people's greed, because other people are life too.</li>
+    <li>We live our whole life through "I and mine", so our whole life sits inside this suffering.</li>
+  </ul>
+
+  <h3>Hate</h3>
+  <ul class="plain">
+    <li>When greed cannot be satisfied, we compare ourselves with other people, and comparing turns to hate.</li>
+    <li>We blame other people: they took it from us, or they had better luck.</li>
+    <li>Jealousy, anger and other negative feelings appear, and become hate.</li>
+    <li>Between two people, hate becomes a fight. Between countries, hate becomes a war.</li>
+  </ul>
+
+  <h3>Stupidity</h3>
+  <ul class="plain">
+    <li>After a war, people do not suddenly turn wise and wish each other peace. The hate grows bigger.</li>
+    <li>People stop caring about logic. Hate makes people insane, and very mean to each other.</li>
+    <li>A small war becomes a big war.</li>
+  </ul>
+  <div class="answered">We do not want to live inside this suffering. Om Mani Padme Hom helps free us from reincarnation: from birth, aging, illness and death, and from greed, hate and stupidity.</div>
+</section>
+
+<section id="l4-oh">
+  <h2>The bridge to Oh, the second sound of Om</h2>
+  <p class="lede">Where suffering comes from.</p>
+  <p>The second sound of Om, Oh, means understanding. To release suffering, first understand where suffering comes from. Suffering is an effect, and every effect comes from a cause. Sifu asked GD to explain.</p>
+
+  <h3>GD's elbow example</h3>
+  <ol class="steps">
+    <li><span>You bang your elbow on the desk and hit the funny bone. It hurts.</span></li>
+    <li><span>The pain has many causes, not one. You had to be there. You were rushing, or not paying attention. Maybe you did not eat or sleep enough. Maybe a fight earlier made you angry.</span></li>
+    <li><span>You cannot see the causes while you are angry. Anger shows you only one narrow angle.</span></li>
+    <li><span>Calm down first. Then observe how it happened.</span></li>
+    <li><span>Now you can change a cause: move the desk, or move the chair.</span></li>
+  </ol>
+  <p>The elbow is one small case. Everything that led up to it is far bigger than what we see in the moment. And we created that suffering ourselves.</p>
+  <p class="note">GD's example sums up the class. Tim and GD have learned Buddhist philosophy for about 20 years, in weekly classes, so these links feel normal to them. For a new student, the links take time.</p>
+
+  <h3>Suffering needs a cause</h3>
+  <p>Sifu takes the elbow from one case to all of life. Suffering never just appears. There is always a cause. That idea carries us from the first sound, Argh, to the second sound, Oh.</p>
+
+  <h3>Blind action</h3>
+  <p>The Twelve Causation (<span class="han">十二因緣</span>) is the Buddhist chain of twelve links. Each link causes the next. Sifu joins the first two links into one idea.</p>
+  <div class="pair">
+    <div class="pane gold"><span class="n">Link 1: blind</span><p><span class="han">無明</span>: not knowing.</p></div>
+    <div class="pane gold"><span class="n">Link 2: action</span><p><span class="han">行</span>: acting.</p></div>
+  </div>
+  <ul class="plain">
+    <li><b>Blind action:</b> we act without being aware of what we are doing. What we do is blind.</li>
+    <li>So each act plants a blind cause, every time.</li>
+    <li>So our future fills with suffering.</li>
+  </ul>
+  <h3>Blind creation power</h3>
+  <ul class="plain">
+    <li>We all have this blind creation power. So does every other consciousness in space.</li>
+    <li>Everyone's blind creation power joins together. So suffering has to exist in this world.</li>
+    <li>If we remove our blind action power, suffering will not appear. At least we will not make suffering, for ourselves or for others.</li>
+  </ul>
+  <div class="answered">That is wisdom.</div>
+</section>
+
+<section id="l4-next">
+  <h2>Coming later</h2>
+  <ul class="plain">
+    <li><b>Oh, in depth:</b> how to observe, and how causation works.</li>
+    <li><b>Mmm:</b> releasing suffering.</li>
+    <li><b>Silence:</b> empty Nirvana joy.</li>
+  </ul>
+</section>
+
+<section id="l4-words">
+  <h2>Key words</h2>
+  <div class="row">
+    <span class="hint">Tap a card to see the meaning.</span>
+    <button class="btn" id="flipAll4" type="button">Show all meanings</button>
+  </div>
+  <div class="cards" id="cards4"></div>
+</section>
+
+<section id="l4-quiz">
+  <h2>Check your understanding</h2>
+  <div class="row">
+    <span class="score" id="score4">0 of 8 answered · 0 correct</span>
+    <button class="btn" id="reset4" type="button">Start again</button>
+  </div>
+  <div id="quizList4" class="flow"></div>
+</section>
+
+<div class="lesson-band five" id="lesson5">
+  <span class="eyebrow">Lesson 5 · Recording date to confirm</span>
+  <h2>What is understanding?</h2>
+  <p>The second sound of Om is Oh, and Oh means understanding. Sifu splits the fix for suffering into a temporary fix and a permanent fix, sorts suffering into three kinds, and shows how the fix has a passive side and an active side.</p>
+</div>
+
+<section id="l5-summary">
+  <h2>Summary</h2>
+  <div class="summary flow">
+    <p>The second sound of Om is Oh. Oh means understanding. Lesson 4 explained Argh, suffering. Lesson 5 explains how to understand suffering.</p>
+    <ul>
+      <li><b>Oh = understanding has two jobs:</b> understand where suffering comes from, and understand how to make suffering go away.</li>
+      <li><b>Oh = understanding, two kinds of fix:</b> a temporary fix treats the symptom. A permanent fix removes the root cause.</li>
+      <li><b>Oh = understanding, three kinds of suffering today:</b> mental suffering is worry. Psychological suffering is fear, which we feel as stress. Physical suffering is pain and tension. The three form a circle, and worry and stress are stored in the body.</li>
+      <li><b>Oh = understanding, fear:</b> all fear comes from one fear, the fear of death. Fear of death is one of the four devils.</li>
+      <li><b>Oh = understanding, two sides of the fix:</b> the passive side clears out the bad. The active side builds the good. Doing both is best.</li>
+    </ul>
+    <p>Om Mani Padme Hom has power for all three kinds of suffering. That is why modern people need the mantra. How the mantra works on them comes in a later class.</p>
+  </div>
+</section>
+
+<section id="l5-om">
+  <h2>The four sounds of Om</h2>
+  <p>This lesson covers the second sound.</p>
+  <div class="sounds">
+    <div class="sound"><span class="n">Sound 1</span><h3>Argh</h3><p>Suffering. Lesson 4.</p></div>
+    <div class="sound now"><span class="n">Sound 2</span><h3>Oh</h3><p>Understanding. This lesson.</p></div>
+    <div class="sound"><span class="n">Sound 3</span><h3>Mmm</h3><p>Releasing. Next lesson.</p></div>
+    <div class="sound"><span class="n">Sound 4</span><h3>Silence</h3><p>Empty Nirvana joy.</p></div>
+  </div>
+  <p class="note">Recap of Lesson 4: suffering is an effect, and every effect comes from a cause. Our own blind action creates the cause.</p>
+</section>
+
+<section id="l5-views">
+  <h2>Why Sifu adds other views to Buddhism</h2>
+  <ul class="plain">
+    <li>Buddhism speaks from a complete, high view of life. Its words can be sharp, deep and dry, far from daily life.</li>
+    <li>Dry words can turn into blind belief.</li>
+    <li>So Sifu adds other views to make the teaching concrete: Daoism, Chinese medicine, Western ideas, martial arts. The main line stays with Buddhism.</li>
+    <li>An idea can sound perfect and still not help. The teaching has to improve our consciousness in real life.</li>
+  </ul>
+</section>
+
+<section id="l5-jobs">
+  <h2>Oh = understanding: two jobs</h2>
+  <ol class="steps">
+    <li><span>Understand what causes suffering, and where suffering comes from.</span></li>
+    <li><span>Understand how to make suffering go away.</span></li>
+  </ol>
+  <p>Understanding the cause alone does not free you from suffering. You need the second job too.</p>
+</section>
+
+<section id="l5-fix">
+  <h2>Oh = understanding: temporary fix and permanent fix</h2>
+  <div class="pair">
+    <div class="pane saffron">
+      <span class="n">Temporary fix</span>
+      <p>Treat the symptom. Example: take a painkiller for a headache. The painkiller works now, but the headache can come back.</p>
+    </div>
+    <div class="pane saffron">
+      <span class="n">Permanent fix</span>
+      <p>Find the root cause, so the suffering never comes back.</p>
+    </div>
+  </div>
+  <ul class="plain">
+    <li>Chinese medicine heals both the cause and the symptom. Ending suffering works the same way.</li>
+    <li>We need both. Sometimes we need an answer right now. For the long term, go deep so the suffering never happens again. Seeing the same suffering come back again and again is no fun.</li>
+    <li>People get stuck in two ways. Some are stuck and want an answer now. Others know a fix, but the suffering keeps coming back, and they are tired of it.</li>
+  </ul>
+  <div class="answered">Oh means the wisdom to answer both.</div>
+</section>
+
+<section id="l5-stronger">
+  <h2>Oh = understanding: the fix must be stronger than the suffering</h2>
+  <ul class="plain">
+    <li>This sound is even deeper than the first. Sifu says you could write 10 books on it.</li>
+    <li>If suffering is a 5, you need wisdom of 10, or even 50. The fix must be stronger than the suffering.</li>
+    <li>A temporary fix needs a lot of wisdom. A permanent fix needs wisdom plus a training system.</li>
+  </ul>
+</section>
+
+<section id="l5-three">
+  <h2>Oh = understanding: three kinds of suffering today</h2>
+  <div class="trio">
+    <div class="pane saffron"><span class="n">Mental</span><p>Worry.</p></div>
+    <div class="pane saffron"><span class="n">Psychological</span><p>Fear. We feel that fear as stress: depression, upset, moody, any negative feeling.</p></div>
+    <div class="pane saffron"><span class="n">Physical</span><p>Pain and tension.</p></div>
+  </div>
+  <p>Money, job and relationship problems all fit inside mental and psychological suffering.</p>
+</section>
+
+<section id="l5-fear">
+  <h2>Oh = understanding: stress is fear</h2>
+  <ul class="plain">
+    <li>We feel the stress, but we do not know what the stress is. Example: you feel uncomfortable, but you do not know why.</li>
+    <li>Buddhism teaches that this stress is fear, in many different forms.</li>
+  </ul>
+  <div class="answered">Seeing that the stress is fear is itself understanding. This is the link from Argh, suffering, to Oh, understanding.</div>
+</section>
+
+<section id="l5-devils">
+  <h2>Oh = understanding: fear and the four devils</h2>
+  <p>Buddhism names four devils.</p>
+  <ol class="steps">
+    <li><span>The three poison consciousness: greed, hate, stupidity. See <a href="#l4-poisons">Lesson 4</a>.</span></li>
+    <li><span>Worry.</span></li>
+    <li><span>Fear of death.</span></li>
+    <li><span>Everyone else's four devils.</span></li>
+  </ol>
+  <ul class="plain">
+    <li>All fear comes from the same fear: fear of death.</li>
+    <li>We never say this fear out loud or talk about it. So the fear stays, and we never face it or understand it.</li>
+  </ul>
+  <p class="note">The course covers the four devils in a later class.</p>
+</section>
+
+<section id="l5-circle">
+  <h2>Oh = understanding: the three kinds form a circle</h2>
+  <p>Modern research treats the three kinds as separate. In truth they form a circle. Each kind affects the other two, and they cannot be broken apart.</p>
+  <ol class="chain" aria-label="How worry and stress harm the body, in order"><li>Worry and stress</li><li>Stored in the body</li><li>Blockage</li><li>Pressure on nerves: pain</li><li>Blood slows</li><li>Organs damaged</li></ol>
+  <ul class="plain">
+    <li>Stored worry creates blockage. Blockage presses on nerves and causes pain, such as a headache.</li>
+    <li>Blockage also slows the blood. When blood does not flow well, organs get damaged.</li>
+    <li>So pain and tension in the body is not only physical.</li>
+  </ul>
+</section>
+
+<section id="l5-start">
+  <h2>Oh = understanding: where to start</h2>
+  <ul class="plain">
+    <li>No single starting point fits everyone. Start with whichever kind is the cause.</li>
+    <li>In most cases, starting with the body helps most. Relaxing the body can stop the worry too, or at least help a lot.</li>
+    <li>A person full of worry often will not look after the body. The worry says "take care of my worry first", and the person handles worry by worrying more.</li>
+    <li>Do not argue with that person. If you go against the person, you lose their trust.</li>
+  </ul>
+  <ol class="steps">
+    <li><span>Help with the worry first, or find something that works.</span></li>
+    <li><span>Earn trust.</span></li>
+    <li><span>Then work on the body.</span></li>
+  </ol>
+</section>
+
+<section id="l5-sides">
+  <h2>Oh = understanding: passive side and active side</h2>
+  <div class="pair">
+    <div class="pane miss">
+      <span class="n">Passive side: clear out the bad</span>
+      <ul>
+        <li>Mind: no more worry.</li>
+        <li>Psychology: no more stress.</li>
+        <li>Body: no more pain and tension.</li>
+      </ul>
+    </div>
+    <div class="pane">
+      <span class="n">Active side: build the good</span>
+      <ul>
+        <li>Mind: sharp, positive, logical and not personal, with good ideas, wise intention and self-confidence.</li>
+        <li>Psychology: inner peace, freedom, relaxation and joy.</li>
+        <li>Body: harmony and balance. Yi Jin Jing and yoga help. Gym training helps too, if it builds balanced, working muscle: muscle linked to the whole body, free to move, with good posture. Gym training that builds tension and pain does not help.</li>
+      </ul>
+    </div>
+  </div>
+  <ul class="plain">
+    <li>The active side is hard to build until the passive side is cleared. Doing both is best.</li>
+    <li>When both sides happen, suffering does not only disappear. Joy appears.</li>
+    <li>With both sides, wisdom keeps growing, and we gain the power to be free from every kind of suffering.</li>
+  </ul>
+</section>
+
+<section id="l5-releasing">
+  <h2>Is this already releasing?</h2>
+  <ul class="plain">
+    <li>Tim and GD asked if this is already Mmm, releasing. Sifu said no. Releasing comes next.</li>
+    <li>Buddhism says wisdom frees us from suffering. That is 100% correct. But "wisdom" is a broad word, and the detail is missing: which wisdom frees us from worry, from stress, and from pain and tension?</li>
+    <li>Sifu adds that detail.</li>
+  </ul>
+</section>
+
+<section id="l5-modern">
+  <h2>Why modern people need Om Mani Padme Hom</h2>
+  <ul class="plain">
+    <li>Om Mani Padme Hom has power for all three kinds of suffering.</li>
+    <li>The mantra helps the mind stop worry, helps psychology stop stress, and helps the body relax, which releases tension and pain.</li>
+    <li>How the mantra does this comes in a later class.</li>
+  </ul>
+</section>
+
+<section id="l5-next">
+  <h2>Coming later</h2>
+  <ul class="plain">
+    <li><b>Mmm:</b> releasing.</li>
+    <li><b>The four devils:</b> and fear of death.</li>
+    <li><b>How the mantra works:</b> on worry, stress, and pain and tension.</li>
+    <li><b>A practical way:</b> a simple way for modern people to handle the three kinds of suffering.</li>
+    <li><b>Past lifetimes:</b> how to remember them. Sifu named this as a future topic.</li>
+  </ul>
+</section>
+
+<section id="l5-words">
+  <h2>Key words</h2>
+  <div class="row">
+    <span class="hint">Tap a card to see the meaning.</span>
+    <button class="btn" id="flipAll5" type="button">Show all meanings</button>
+  </div>
+  <div class="cards" id="cards5"></div>
+</section>
+
+<section id="l5-quiz">
+  <h2>Check your understanding</h2>
+  <div class="row">
+    <span class="score" id="score5">0 of 8 answered · 0 correct</span>
+    <button class="btn" id="reset5" type="button">Start again</button>
+  </div>
+  <div id="quizList5" class="flow"></div>
+</section>
+
+<div class="lesson-band six" id="lesson6">
+  <span class="eyebrow">Lesson 6 · Recording date to confirm</span>
+  <h2>Where suffering comes from: blind searching</h2>
+  <p>More on Oh, the second sound of Om. Oh means understanding. Sifu shows where suffering starts: inside us, in blind searching for "I and mine". Then he shows why understanding is not yet ability, and how to practise.</p>
+</div>
+
+<section id="l6-summary">
+  <h2>Summary</h2>
+  <div class="summary flow">
+    <p>The second sound of Om is Oh. Oh means understanding. Lesson 5 showed how to fix suffering. Lesson 6 shows where suffering comes from.</p>
+    <ul>
+      <li><b>Oh = understanding, two timings:</b> a temporary way gets rid of suffering for now. An eternal way pulls out the root, so suffering stops for good.</li>
+      <li><b>Oh = understanding, inside and outside:</b> the root of suffering is inside, in our own blind consciousness. Outside is the body and the space around us.</li>
+      <li><b>Oh = understanding, blind searching:</b> from birth, we all search for two things. "I": who and what am I? "Mine": what do I want to own? This searching keeps us in reincarnation, the cycle of being born again and again.</li>
+      <li><b>Oh = understanding, two kinds of searching:</b> ego searching gives fun that fades. Curiosity searching develops wisdom, and its joy lasts. Curiosity searching is the only key out of suffering and reincarnation.</li>
+      <li><b>Understanding is not ability:</b> reading a tennis book does not mean you can play tennis. Mmm, the third sound, is the trained ability to release suffering.</li>
+    </ul>
+    <p>To practise, start by listening to your own voice as you sing the mantra. The higher level joins the mantra to open joints, charged energy and Buddhist breathing. That higher level leads to Nirvana, the fourth sound.</p>
+  </div>
+</section>
+
+<section id="l6-om">
+  <h2>The four sounds of Om</h2>
+  <p>Sifu ran through the four sounds again. This lesson stays on the second sound.</p>
+  <div class="sounds">
+    <div class="sound"><span class="n">Sound 1</span><h3>Argh</h3><p>Suffering. Lesson 4.</p></div>
+    <div class="sound now6"><span class="n">Sound 2</span><h3>Oh</h3><p>Understanding where suffering comes from. Lessons 5 and 6.</p></div>
+    <div class="sound"><span class="n">Sound 3</span><h3>Mmm</h3><p>The ability to release suffering. Sifu calls it a healing ability.</p></div>
+    <div class="sound"><span class="n">Sound 4</span><h3>Silence</h3><p>Joy. Nirvana.</p></div>
+  </div>
+  <p class="note">Oh and Mmm are different. Oh is knowing. Mmm is being able to do. See <a href="#l6-ability">Understanding is not ability</a>.</p>
+</section>
+
+<section id="l6-timing">
+  <h2>Oh = understanding: two timings</h2>
+  <p>Oh is the wisdom to understand where suffering comes from. Sifu splits it by timing.</p>
+  <div class="pair">
+    <div class="pane plum"><span class="n">Temporary</span><p>How suffering appears now, and the wisdom that gets rid of it for now.</p></div>
+    <div class="pane plum"><span class="n">Eternal</span><p>The root that keeps creating suffering, and the wisdom that pulls out the root for good.</p></div>
+  </div>
+  <p class="note">Lesson 5 called these the <a href="#l5-fix">temporary fix and the permanent fix</a>.</p>
+</section>
+
+<section id="l6-inside">
+  <h2>Oh = understanding: inside and outside</h2>
+  <p class="lede">Is this wisdom only for yourself, or for others too?</p>
+  <p>GD asked if the wisdom is internal (inside you) or external (outside you), since you can also help someone else. Sifu: suffering comes from both.</p>
+  <div class="pair">
+    <div class="pane plum">
+      <span class="n">Inside: the root</span>
+      <ul>
+        <li>Our consciousness is not yet developed. It is blind.</li>
+        <li>Blind consciousness searches, because it wants to know what life is.</li>
+        <li>That searching power pulls us into reincarnation.</li>
+      </ul>
+    </div>
+    <div class="pane plum">
+      <span class="n">Outside: the body and space</span>
+      <ul>
+        <li>In reincarnation, every blind consciousness together creates space and time.</li>
+        <li>What we experience is space and time, and that includes our body.</li>
+        <li>The body and the space around us are outside.</li>
+      </ul>
+    </div>
+  </div>
+  <h3>The body is a space made of four elements</h3>
+  <div class="tablewrap"><table>
+    <thead><tr><th>Element</th><th>In the body</th></tr></thead>
+    <tbody>
+      <tr><td class="part">Air</td><td>Breath.</td></tr>
+      <tr><td class="part">Fire</td><td>Body heat.</td></tr>
+      <tr><td class="part">Water</td><td>Most of the body.</td></tr>
+      <tr><td class="part">Earth</td><td>The solid part.</td></tr>
+    </tbody>
+  </table></div>
+  <ul class="plain">
+    <li>In open space, the four elements stay separate, though they still connect.</li>
+    <li>In a body, the four elements must unite in harmony.</li>
+    <li>The way the body grows also creates time.</li>
+  </ul>
+  <div class="answered">Suffering comes from inside and outside. We have to wake up to both.</div>
+  <p class="note">Tim recalled another way Sifu puts it: inward attitude and external action. Sifu agreed.</p>
+</section>
+
+<section id="l6-searching">
+  <h2>Oh = understanding: blind searching</h2>
+  <p class="lede">What does "searching" mean?</p>
+  <p>GD asked: someone might say, "I don't search for anything. I'm just me." Sifu: everyone searches, from the day we are born, for two things. No one can stop.</p>
+  <ol class="steps">
+    <li><span><b>"I": who am I, what am I?</b> What kind of being do I want to be? This is the first searching.</span></li>
+    <li><span><b>"Mine": what do I want to own?</b> What I do not have yet, and what I already have.</span></li>
+  </ol>
+  <ul class="plain">
+    <li>Our thinking power works on these two subjects most of the time.</li>
+    <li>Lessons 3 and 4 called this <a href="#l4-poisons">"I and mine"</a>.</li>
+  </ul>
+</section>
+
+<section id="l6-wrong">
+  <h2>Oh = understanding: what is wrong with searching?</h2>
+  <p>GD: searching is fun. Why call it blind?</p>
+  <ul class="plain">
+    <li>Searching is fun when you find what you want without suffering.</li>
+    <li>But the way we grow up and search brings much suffering. We search because there is so much blindness.</li>
+    <li>Even when it is fun, the fun disappears. When the fun goes, you are not happy and not satisfied. A negative side appears.</li>
+  </ul>
+  <p class="note">Buddhism compares this to honey on a knife. The honey tastes sweet, but licking it cuts the tongue.</p>
+</section>
+
+<section id="l6-kinds">
+  <h2>Oh = understanding: two kinds of searching</h2>
+  <div class="pair">
+    <div class="pane miss">
+      <span class="n">Ego searching: the fun fades</span>
+      <ul>
+        <li>Society teaches us to search for the ego, the "I".</li>
+        <li>Society teaches us to hold on to things and people: possessions and relationships.</li>
+        <li>The fun is temporary.</li>
+      </ul>
+    </div>
+    <div class="pane">
+      <span class="n">Curiosity searching: the joy lasts</span>
+      <ul>
+        <li>Searching to understand life, and the truth beyond everything, with no more blindness.</li>
+        <li>Eternal wisdom is already in us. We still have to develop it, the way any ability grows with practice.</li>
+        <li>So the joy lasts forever.</li>
+      </ul>
+    </div>
+  </div>
+  <ul class="plain">
+    <li>We are not born with curiosity searching. Society teaches ego searching instead.</li>
+    <li>That is why people are still in reincarnation.</li>
+  </ul>
+  <div class="answered">Curiosity searching is not only okay. It is the only key out of reincarnation and out of suffering. It is why we learn Om Mani Padme Hom.</div>
+</section>
+
+<section id="l6-asking">
+  <h2>Why Tim and GD keep asking</h2>
+  <ul class="plain">
+    <li>Viewers may wonder why Tim and GD keep digging. GD: if you do not understand from your own heart, you will not trust the teaching. Digging is the opposite of accepting blindly.</li>
+    <li>Tim: he has to rebuild the teaching for himself. Then Dharma gives the answer, and he comes back to it. If he takes the answer from someone without understanding it, he cannot use it, and he gets lost.</li>
+    <li>GD: school taught us to learn the answer for the test, get the mark, and move on. Here you must understand until your heart feels sure and at peace.</li>
+    <li>A level above that: explain it to someone else. If your heart and brain are not clear, the words do not come out right.</li>
+  </ul>
+</section>
+
+<section id="l6-awakening">
+  <h2>Sifu's view: a global awakening</h2>
+  <ul class="plain">
+    <li>Sifu feels a global awakening is coming.</li>
+    <li>People now take in huge amounts of information, much of it through AI. Sifu thanks AI for this.</li>
+    <li>So much information makes people feel weak, insecure and stressed. Blind belief starts to fade. People start to wonder: "What is life? How do I get rid of suffering?"</li>
+    <li>The only way to end that stress is to find a true answer. So the huge amount of information pushes everyone toward waking up.</li>
+  </ul>
+  <p class="note">Sifu calls this the joint karma awakening. Joint karma is the karma we all create together. Sifu sees this timing as positive.</p>
+</section>
+
+<section id="l6-ability">
+  <h2>Understanding is not ability</h2>
+  <p class="lede">Where does understanding turn into healing?</p>
+  <p>Tim asked this. Sifu answered with tennis.</p>
+  <ol class="steps">
+    <li><span>Read a tennis book. You understand the rules, the court, and who serves first.</span></li>
+    <li><span>That does not mean you can play tennis.</span></li>
+    <li><span>To play well, go to the court, hold the racket and hit the ball. That is training, and training builds ability.</span></li>
+  </ol>
+  <ul class="plain">
+    <li>Sifu: when he plays tennis, his awareness cannot keep up with what he knows. He needs to train.</li>
+    <li>So Oh is understanding. Mmm is ability: the trained ability to release suffering.</li>
+    <li>GD's example: you leave a calm class feeling peaceful. Someone cuts you off in traffic, and you get angry. Using the wisdom in every moment is a further level, and that is what we practise.</li>
+  </ul>
+  <h3>Two abilities</h3>
+  <div class="pair">
+    <div class="pane plum"><span class="n">Temporary</span><p>Release suffering now, any time you want. Temporary suffering comes in many forms: mental, psychological and physical.</p></div>
+    <div class="pane plum"><span class="n">Eternal</span><p>Stop creating suffering at the root. Develop eternal wisdom and live in it now. Observe creation with pure logic. Then you create no blindness.</p></div>
+  </div>
+  <div class="answered">Both abilities are in every human. Om Mani Padme Hom can wake up both.</div>
+  <p class="note">Sifu: live the wisdom in each present moment, with no beginning and no end. Then the present becomes a present: a gift.</p>
+</section>
+
+<section id="l6-practice">
+  <h2>How to practise</h2>
+  <h3>Level 1: listen and enjoy</h3>
+  <ol class="steps">
+    <li><span>Come to the class first. Understand the meaning, and see the benefit. Your psychology turns positive.</span></li>
+    <li><span>As you say or sing Om Mani Padme Hom, use your mind to listen to the sound.</span></li>
+    <li><span>Concentrate on the sound, and enjoy your own voice.</span></li>
+  </ol>
+  <p>Now your mind and your psychology both join the mantra. Lesson 3 gave the same <a href="#l3-level1">Level 1</a>.</p>
+
+  <h3>Higher level: two masters and the breath</h3>
+  <div class="pair">
+    <div class="pane plum">
+      <span class="n">Bodhidharma <span class="han">達摩</span></span>
+      <p>Yi Jin Jing. Open every joint, with no tension.</p>
+    </div>
+    <div class="pane plum">
+      <span class="n">Zhang San Feng <span class="han">張三丰</span></span>
+      <p>The tai chi master. Charge the energy, let it run, and connect the whole body.</p>
+    </div>
+  </div>
+  <ol class="steps">
+    <li><span>Join both to the breathing that Buddhism teaches. Each breath charges energy and opens the joints.</span></li>
+    <li><span>Sing Om Mani Padme Hom with that breath.</span></li>
+    <li><span>Keep the brain fully on three things: the charge, the openness, and the sound. The brain stops its nonsense thinking.</span></li>
+  </ol>
+  <ul class="plain">
+    <li>Your whole consciousness wakes up, and unites with the body's subconsciousness: the awareness in the body that works below thinking.</li>
+    <li>Gravity pulls us into bad posture. Bad posture creates blockage, and blockage creates suffering. This practice works against gravity.</li>
+    <li>You lose physical pain and tension, and you wake up to your subconsciousness.</li>
+    <li>You can enter real still meditation, and feel complete content and joy. That is the fourth sound: Nirvana. Everyone can experience Nirvana.</li>
+  </ul>
+  <h3>Why the body matters</h3>
+  <ol class="chain" aria-label="How a blocked body stops joy, in order"><li>Blocked joints, stuck energy</li><li>Physical pain</li><li>Mental worry and stress</li><li>Down, negative psychology</li><li>No joy, no spiritual energy</li></ol>
+  <p class="note">Bodhidharma brought Zen (Chan) Buddhism to China, and Yi Jin Jing is credited to him. Zhang San Feng is the Daoist master credited with founding tai chi.</p>
+</section>
+
+<section id="l6-next">
+  <h2>Coming later</h2>
+  <ul class="plain">
+    <li><b>Mmm and Silence:</b> the third and fourth sounds, in more depth.</li>
+    <li><b>Tai chi energy charge:</b> the idea, and some simple practice.</li>
+    <li><b>Yi Jin Jing:</b> opening every joint, and some simple practice.</li>
+    <li><b>Joining them:</b> bringing both into singing Om Mani Padme Hom.</li>
+  </ul>
+</section>
+
+<section id="l6-words">
+  <h2>Key words</h2>
+  <div class="row">
+    <span class="hint">Tap a card to see the meaning.</span>
+    <button class="btn" id="flipAll6" type="button">Show all meanings</button>
+  </div>
+  <div class="cards" id="cards6"></div>
+</section>
+
+<section id="l6-quiz">
+  <h2>Check your understanding</h2>
+  <div class="row">
+    <span class="score" id="score6">0 of 7 answered · 0 correct</span>
+    <button class="btn" id="reset6" type="button">Start again</button>
+  </div>
+  <div id="quizList6" class="flow"></div>
+</section>
+
+<div class="lesson-band seven" id="lesson7">
+  <span class="eyebrow">Lesson 7 · 15 November 2026</span>
+  <h2>Mmm: releasing suffering is compassion</h2>
+  <p>The third sound of Om. Mmm means releasing suffering, first your own and then everyone's. Sifu shows that releasing is compassion, how ego hides inside compassion, how the mantra helps, and how releasing leads to Nirvana.</p>
+</div>
+
+<section id="l7-summary">
+  <h2>Summary</h2>
+  <div class="summary flow">
+    <p>The third sound of Om is Mmm. Mmm means releasing suffering: being free from suffering and from reincarnation, and awakening.</p>
+    <ul>
+      <li><b>Mmm = releasing:</b> Oh, part one, is understanding where suffering comes from. Mmm, part two, brings that power out to help yourself, then every life.</li>
+      <li><b>Mmm = compassion:</b> releasing your own suffering is compassion to yourself. Helping others release theirs is compassion to others.</li>
+      <li><b>Ego in compassion:</b> most compassion still has ego in it. True, spiritual compassion has five conditions.</li>
+      <li><b>Two ways the mantra helps:</b> you learn the wisdom yourself, and the sound connects you to awakened consciousness, which helps you. The main cause is still you.</li>
+      <li><b>Worry:</b> a blind habit. It starts as a fair warning and grows into fear that takes over life. Seen the right way, worry is a lesson.</li>
+      <li><b>The joy of helping others:</b> a very deep, very pure joy. Before you reach it, there is a big challenge.</li>
+    </ul>
+    <p>Releasing starts at the temporary level: mind, psychology and body. When all three are free, the Mmm of Om appears, and it leads to Nirvana, the fourth sound.</p>
+  </div>
+</section>
+
+<section id="l7-om">
+  <h2>The four sounds of Om</h2>
+  <p>This lesson moves on to the third sound.</p>
+  <div class="sounds">
+    <div class="sound"><span class="n">Sound 1</span><h3>Argh</h3><p>Suffering. Lesson 4.</p></div>
+    <div class="sound"><span class="n">Sound 2</span><h3>Oh</h3><p>Understanding where suffering comes from. Lessons 5 and 6.</p></div>
+    <div class="sound now7"><span class="n">Sound 3</span><h3>Mmm</h3><p>Releasing suffering: compassion, a healing ability. Lesson 7.</p></div>
+    <div class="sound"><span class="n">Sound 4</span><h3>Silence</h3><p>Nirvana: complete content and joy. Next lesson.</p></div>
+  </div>
+</section>
+
+<section id="l7-meaning">
+  <h2>Mmm = releasing: what it means</h2>
+  <ul class="plain">
+    <li>Mmm means releasing suffering. You become free from suffering, free from reincarnation, and you awaken.</li>
+    <li>To release suffering, you understand how its roots can be taken out.</li>
+    <li>Om has two parts. Part one is Oh, the understanding. Part two is Mmm: bring the power of part one out to help everyone.</li>
+    <li>First you release yourself. When that works, you use the power to help every life. That is the Buddhist idea of true compassion.</li>
+  </ul>
+  <div class="answered">Mmm is wisdom-style compassion, towards yourself and towards every life.</div>
+  <p class="note">Lesson 6 said Mmm is the trained ability to release suffering. See <a href="#l6-ability">Understanding is not ability</a>. Lesson 7 adds that this ability is compassion.</p>
+</section>
+
+<section id="l7-ego">
+  <h2>Mmm = compassion: the ego kinds</h2>
+  <p>Compassion comes in many kinds. Most of them still carry ego.</p>
+  <div class="trio">
+    <div class="pane miss"><span class="n">Feel-good compassion</span><p>You help because you want to feel good about yourself, or you want people to know you are a good person.</p></div>
+    <div class="pane miss"><span class="n">Blind compassion</span><p>You want to help others, but you do not yet know how to help yourself.</p></div>
+    <div class="pane miss"><span class="n">Self-pity compassion</span><p>Deep down, you are afraid of suffering yourself. Someone else's suffering feels related to you, so you want to help them. Really, you want to help yourself.</p></div>
+  </div>
+  <h3>Sifu's example: the student and his sister</h3>
+  <ul class="plain">
+    <li>A student wanted to help his sister. She was depressed, overweight and not healthy.</li>
+    <li>Sifu told him to start with himself: learn to be free from negative thoughts and negative psychology, and learn to be strong and healthy.</li>
+    <li>He wanted to help her because she was his sister. But he did not know how, and he felt he was drowning in the wish to help.</li>
+    <li>Sifu called it an emotional ego game for himself, not real help. The student was shocked.</li>
+  </ul>
+  <p class="note">Sifu: we all have this ego-style compassion.</p>
+</section>
+
+<section id="l7-five">
+  <h2>Mmm = compassion: the five conditions of true compassion</h2>
+  <p>Tim recalled a checklist from years ago. Sifu agreed with all five.</p>
+  <ol class="steps">
+    <li><span>You have the ability to help.</span></li>
+    <li><span>It is your own free will to help.</span></li>
+    <li><span>It is their free will to choose you: they ask for your help.</span></li>
+    <li><span>You enjoy helping.</span></li>
+    <li><span>The help goes in a wise, positive, spiritual direction.</span></li>
+  </ol>
+</section>
+
+<section id="l7-reincarnation">
+  <h2>What is reincarnation?</h2>
+  <ul class="plain">
+    <li>Reincarnation is blind birth, again and again, with no way out of it.</li>
+    <li>You keep being reborn the blind way, until you truly have the freedom to control your own birth and death.</li>
+    <li>Reincarnation is like gambling, the bad kind: blind, with no control. You could be born into unlimited possibilities with unlimited suffering. That is scary.</li>
+    <li>But reincarnation also has a positive side. It is like a nightmare. If you are dreaming a nightmare, you can still wake up.</li>
+  </ul>
+  <div class="answered">Since we are already blind in reincarnation, the wisdom to wake up is surely there too, waiting for us to find it.</div>
+</section>
+
+<section id="l7-ways">
+  <h2>Two ways Om Mani Padme Hom helps you awaken</h2>
+  <div class="pair">
+    <div class="pane teal"><span class="n">Direct: the wisdom</span><p>You learn the wisdom yourself. That is why learning the meaning of the mantra matters.</p></div>
+    <div class="pane teal"><span class="n">Connection: the sound</span><p>The sound of the mantra is a channel, a wave, that connects you to Buddha, Bodhisattva and awakened consciousness. They support you to awaken.</p></div>
+  </div>
+  <p>The mantra does both. Without the meaning, you miss the foundation.</p>
+  <h3>Help even without the meaning</h3>
+  <ul class="plain">
+    <li>If you are sincere, you still get the second kind of help. Say the mantra with respect and appreciation, even without understanding it, and you still connect to Buddha and Bodhisattva.</li>
+    <li>Sifu asked GD why. GD: you are creating a cause. You are humble, so you are letting go of your ego, or learning to. That lets a higher level of consciousness help you. And you are asking for help.</li>
+    <li>Sifu: you prepare the cause, and life is cause and effect.</li>
+    <li>Buddha and Bodhisattva always want to help, not only you but every life, out of all blindness and suffering. They naturally want to share that wisdom.</li>
+    <li>But they cannot help you, or control your life, if you do not ask sincerely from your heart.</li>
+  </ul>
+  <div class="answered">If you understand the meaning as well, it is a double force. You help yourself, and they help you. That is even faster.</div>
+  <p class="note">Lesson 2 gave the same two conditions: <a href="#l2-meaning">understand the meaning</a> and <a href="#l2-heart">a sincere heart</a>.</p>
+</section>
+
+<section id="l7-how">
+  <h2>How the mantra releases suffering</h2>
+  <p>Tim's summary: you release suffering through wisdom and understanding. You are the main cause. You develop it as an ability you can share, to help yourself and other lives. Perfect that ability, and you can help unlimited lives. Sifu agreed.</p>
+  <ol class="steps">
+    <li><span><b>The sound</b> connects you to Buddha and Bodhisattva. They change your karma, and guide you to find someone who can teach you.</span></li>
+    <li><span><b>The meaning</b> gathers Dharma nutrients. Your wisdom starts to grow. You learn to release your own suffering, then others' suffering.</span></li>
+  </ol>
+  <ul class="plain">
+    <li>The main cause is still yourself, but it grows two ways. Your wisdom grows, and the connection and protection from Buddha and Bodhisattva turns your karma in a spiritual direction, so you get the chance to learn.</li>
+    <li>Tim: without the mantra's connection, it would only be ourselves trying to understand. Through awakened consciousness, compassion helps guide our life, and guides others into our life. Once our level is high enough, it opens our heart to share.</li>
+  </ul>
+</section>
+
+<section id="l7-changing">
+  <h2>Suffering from changing: birth, aging, illness, death</h2>
+  <p>When we understand the meaning, we start to see that life is blind birth and blind death, again and again.</p>
+  <div class="tablewrap"><table>
+    <thead><tr><th>Stage</th><th>Why it is suffering</th></tr></thead>
+    <tbody>
+      <tr><td class="part">Birth</td><td>A blind birth, without knowing how or why.</td></tr>
+      <tr><td class="part">Aging</td><td>Aging is change. Not only the body changes. Your whole situation changes, and you face new challenges.</td></tr>
+      <tr><td class="part">Illness</td><td>Direct suffering: physical, mental and psychological.</td></tr>
+      <tr><td class="part">Death</td><td>When the suffering is so strong that the body breaks down completely, fear appears. We have to face the complete unknown.</td></tr>
+    </tbody>
+  </table></div>
+  <ul class="plain">
+    <li>We never think it is important to see through this and be free from it.</li>
+    <li>With Om Mani Padme Hom, we understand that life uses suffering to teach us, and that there is an answer.</li>
+    <li>So we become curious to learn about life, not only to search for outside, material things.</li>
+    <li>Holding on to outside things is a blind habit. It is dangerous, because everyone still faces a blind death and loses everything.</li>
+    <li>Many people give their whole life and their health for outside things. That is the wrong way, and it is why aging, illness and death come.</li>
+  </ul>
+  <div class="answered">The mantra changes our intention. It purifies our heart, so we learn to live healthy and become wise.</div>
+  <p class="note">Lesson 4 covered <a href="#l4-cycle">birth, aging, illness and death</a>. Lesson 6 covered <a href="#l6-kinds">ego searching and curiosity searching</a>.</p>
+</section>
+
+<section id="l7-worry">
+  <h2>An example: worry</h2>
+  <p class="lede">How does a simple warning become a life of worry?</p>
+  <p>GD recalled last week's example: you rush, you are not aware, and you bang your elbow, so next time you do not rush. Tim wanted an example that goes deeper. GD suggested worry, and Sifu explained it.</p>
+  <ol class="chain" aria-label="How worry grows, in order"><li>Pain and suffering</li><li>You get scared</li><li>A warning</li><li>Fear</li><li>Worry is all that is left</li></ol>
+  <ul class="plain">
+    <li>Worry is a very tricky system. Our own heart creates it.</li>
+    <li>The warning gets passed down. Parents who suffered and made mistakes pass their worry on to us. Then we make our own mistakes growing up, and we get our own warnings.</li>
+    <li>At first it is only a warning: "I have to be careful." Being careful is not wrong, if you stay calm and care in a peaceful way.</li>
+    <li>Then it becomes fear. You always feel, "I am going to do it wrong." You get so stressed you cannot enjoy life. That is the blind habit of worry.</li>
+    <li>It goes deeper. If you do not worry, you feel nothing. Worry becomes the only thing left, and life is real suffering. We get lost in the trick.</li>
+    <li>Worry shows in your wrinkles: even when you smile, you are suffering. It shows in your body language. You no longer move like a child: not flexible, not carefree. No wisdom, no curiosity, no joy.</li>
+    <li>"I worry I am going to worry later. I don't worry enough now." It started as something simple. Now it is very powerful.</li>
+  </ul>
+  <h3>Worry is a lesson</h3>
+  <ul class="plain">
+    <li>Worry is nothing bad. We can read it the right way and start to understand it.</li>
+    <li>We learn to clean it up, and not get lost in it. We earn wisdom from it.</li>
+    <li>Because we are willing to help ourselves feel free and enjoy life, we can help others too.</li>
+  </ul>
+  <div class="answered">We enjoy life, and we help other people enjoy life. That is the meaning of life.</div>
+</section>
+
+<section id="l7-joy">
+  <h2>Joy is a gift you create</h2>
+  <ul class="plain">
+    <li>Life is meant to be enjoyed, but joy does not come as a gift forever.</li>
+    <li>When you are young, you get a taste of the gift. Life is a lot of fun, but not forever.</li>
+    <li>You have to learn how to develop it. You have to create joy. Then you can help others enjoy life.</li>
+    <li>That is double joy: a gift from your own creation.</li>
+  </ul>
+  <h3>The joy of helping others</h3>
+  <ul class="plain">
+    <li>GD: releasing suffering for yourself is one thing. Helping another person release their suffering, and have a lot more joy in their life, is another level of enjoying life. You have already helped yourself, so helping them creates a different kind of joy. It is another layer.</li>
+    <li>Sifu: it is a very deep, very pure joy. But before you reach that joy, there is a big challenge.</li>
+    <li>GD agreed: it is not easy.</li>
+  </ul>
+</section>
+
+<section id="l7-levels">
+  <h2>Releasing: temporary and eternal</h2>
+  <p>Compassion, towards yourself and towards others, has two types: temporary and eternal. Temporary releasing has three parts.</p>
+  <ol class="steps">
+    <li><span><b>Mind:</b> free from worry.</span></li>
+    <li><span><b>Psychology:</b> do not get trapped in stress. Do not follow negative emotion of any kind, or moody, negative feelings. This is very, very difficult.</span></li>
+    <li><span><b>Body:</b> make the body powerful. Curl the stomach to charge up the energy. Bring that charge up into a proud, open chest and open shoulders. The whole body connects as one piece, like a dragon twisting, with the breath. This takes the body out of the blindness of tension and suffering, into a powerful, healthy human body.</span></li>
+  </ol>
+  <p>When you have the power to be free in all three, the Mmm of Om appears.</p>
+  <ol class="chain" aria-label="From releasing to Nirvana, in order"><li>Free in mind, psychology and body</li><li>Mmm appears</li><li>You enjoy life and help others</li><li>Spiritual karma appears</li><li>The heart is completely content</li><li>Nirvana, the silence</li></ol>
+  <p class="note">Lesson 6 gave the same body work through <a href="#l6-practice">Bodhidharma's Yi Jin Jing and Zhang San Feng's tai chi</a>. Lesson 5 called the two types the <a href="#l5-fix">temporary fix and the permanent fix</a>.</p>
+</section>
+
+<section id="l7-nirvana">
+  <h2>A first look at Nirvana: the fourth sound</h2>
+  <ul class="plain">
+    <li>Nirvana is when your consciousness is completely free, no longer limited by the body.</li>
+    <li>You can be aware of any space and any time. You are aware that the true essence of life is already perfect.</li>
+    <li>Our true essence has the ability to create spiritual life and spiritual joy.</li>
+    <li>Because you make yourself free from blindness, you go back to your essence. There you find your essence is already perfect. That is natural Nirvana.</li>
+  </ul>
+  <h3>Nirvana becomes unlimited</h3>
+  <ul class="plain">
+    <li>Your own perfect, joyful essence creates spirit, light, joy, wisdom and compassion.</li>
+    <li>Then you help others reach Nirvana too. When they become free from suffering and reincarnation, they go back to their own essence, and experience Nirvana from their own essence.</li>
+    <li>You connect to their journey. You share it, and you are aware of it. Your awareness is no longer limited to your own perfect essence. It connects to the perfect essence of every life you help awaken.</li>
+  </ul>
+  <div class="answered">The more you connect and the more you help, the more unlimited it becomes. That is unlimited joy through eternal wisdom.</div>
+  <p class="note">Sifu's closing wish: may everyone be free from blindness, find their perfect essence, and go into unlimited joy.</p>
+</section>
+
+<section id="l7-next">
+  <h2>Coming later</h2>
+  <ul class="plain">
+    <li><b>Nirvana:</b> the fourth sound, silence, in more depth. Sifu: next time.</li>
+    <li><b>The body practice:</b> curling the stomach, the proud chest, the whole body as one piece.</li>
+  </ul>
+</section>
+
+<section id="l7-words">
+  <h2>Key words</h2>
+  <div class="row">
+    <span class="hint">Tap a card to see the meaning.</span>
+    <button class="btn" id="flipAll7" type="button">Show all meanings</button>
+  </div>
+  <div class="cards" id="cards7"></div>
+</section>
+
+<section id="l7-quiz">
+  <h2>Check your understanding</h2>
+  <div class="row">
+    <span class="score" id="score7">0 of 8 answered · 0 correct</span>
+    <button class="btn" id="reset7" type="button">Start again</button>
+  </div>
+  <div id="quizList7" class="flow"></div>
+</section>
+
+<div class="lesson-band eight" id="lesson8">
+  <span class="eyebrow">Lesson 8 · 22 November 2026</span>
+  <h2>The full view: EFG (essence, function, goal)</h2>
+  <p>Sifu sums up the whole mantra from beginning to end. Om is the foundation, then Ma Ni, Bei Me and Hong. Then essence, function and goal, with three examples: a cup, an iPhone and a human.</p>
+</div>
+
+<section id="l8-summary">
+  <h2>Summary</h2>
+  <div class="summary flow">
+    <p>Blindness exists, so awakening surely exists. Om Ma Ni Bei Me Hong frees us from blindness and suffering.</p>
+    <ul>
+      <li><b>Om:</b> four sounds. Argh (suffering), Oh (understanding), Mmm (releasing), silence (content and perfect).</li>
+      <li><b>Two styles of awakening:</b> temporary (take care of each case of suffering) and eternal (take out the root, the cause, of suffering).</li>
+      <li><b>Ma Ni:</b> the wisdom jewel. Complete wisdom, never wrong for any space, any time and any life form.</li>
+      <li><b>Bei Me:</b> the lotus. Compassion, the purifying power that grows something pure and beautiful out of muddy dirt.</li>
+      <li><b>Hong:</b> the graduated consciousness. It already has the power to free itself and others. Hong equals Buddha.</li>
+      <li><b>Essence, function and goal:</b> the mantra shows all three for life. The goal is never in the future. It is in each present moment, as a perfect gift.</li>
+      <li><b>Double awakening:</b> your own understanding, plus connection to awakened consciousness.</li>
+    </ul>
+    <p>Everything has an essence, a function and a goal. Looking for all three in daily life grows wisdom faster.</p>
+  </div>
+</section>
+
+<section id="l8-points">
+  <h2>The full view in four points</h2>
+  <h3>Point 1: blindness means awakening exists</h3>
+  <ul class="plain">
+    <li>We are born blindly. We do not know why or how we suddenly became a human.</li>
+    <li>Then we follow the blind path: we grow, we age, we sometimes get sick, and we die.</li>
+    <li>If blindness exists, awakening surely exists. It is like a dream: if you are dreaming, you can surely wake up.</li>
+    <li>If there is suffering, there is surely a way to get rid of suffering. If there is blindness, wisdom surely exists to clean the blindness out.</li>
+  </ul>
+  <h3>Point 2: Om Ma Ni Bei Me Hong frees us</h3>
+  <p>The mantra helps us become free from blindness and free from suffering.</p>
+  <h3>Point 3: the sound Om has four meanings</h3>
+  <div class="sounds">
+    <div class="sound now8"><span class="n">Sound 1</span><h3>Argh</h3><p>We blindly create suffering. Lesson 4.</p></div>
+    <div class="sound now8"><span class="n">Sound 2</span><h3>Oh</h3><p>We understand where suffering comes from. Lessons 5 and 6.</p></div>
+    <div class="sound now8"><span class="n">Sound 3</span><h3>Mmm</h3><p>We release suffering for ourselves and help others. Lesson 7.</p></div>
+    <div class="sound now8"><span class="n">Sound 4</span><h3>Silence</h3><p>We become content. All four together mean perfect.</p></div>
+  </div>
+  <h3>Point 4: awakening has two styles</h3>
+  <p>Temporary and eternal. The next two sections explain each one.</p>
+</section>
+
+<section id="l8-temporary">
+  <h2>Temporary awakening: take care of each case</h2>
+  <p>Temporary means you see the cause of one case of suffering, and you take care of that case.</p>
+  <p>Our suffering comes from birth, aging, illness and death. These four cover three kinds of suffering, and each kind has its own temporary fix.</p>
+  <div class="trio">
+    <div class="pane moss"><span class="n">Mind: worry</span><p>Learn not to follow the power of worry.</p></div>
+    <div class="pane moss"><span class="n">Psychology: stress</span><p>Purify the stress and become free from it.</p></div>
+    <div class="pane moss"><span class="n">Body: pain and tension</span><p>Relieve the pain and tension in the body.</p></div>
+  </div>
+  <div class="answered">The aim is to go back to pure joy, like a happy kid who lives in the present and enjoys life.</div>
+  <p>These are all temporary. In each case, you learn some wisdom straight away and take care of it.</p>
+  <p class="note">Lesson 7 gave the same three parts of <a href="#l7-levels">temporary releasing</a>: mind, psychology and body.</p>
+</section>
+
+<section id="l8-eternal">
+  <h2>Eternal awakening: take out the root</h2>
+  <ul class="plain">
+    <li>Our awareness power is our true self.</li>
+    <li>Right now that awareness power experiences life through the body. It connects to this universe, and to this space and time.</li>
+    <li>If our awareness is awakened, we will surely choose to create joy, not suffering. So we help our consciousness awaken.</li>
+    <li>We observe our consciousness, and see in which way it creates suffering.</li>
+    <li>When we take out the root (the cause), we no longer create suffering.</li>
+    <li>The other side: our awareness learns how to create joy.</li>
+  </ul>
+  <ol class="chain" aria-label="Eternal awakening, in order"><li>Observe your consciousness</li><li>See how it creates suffering</li><li>Take out the root</li><li>The root becomes wisdom</li></ol>
+  <div class="answered">The root is not only taken out. It is transcended into wisdom.</div>
+  <p>The whole process of Om also shows up in Ma Ni, Bei Me and Hong.</p>
+</section>
+
+<section id="l8-mani">
+  <h2>Ma Ni: the wisdom jewel</h2>
+  <ul class="plain">
+    <li>Ma Ni is like the Oh sound. It means wisdom.</li>
+    <li>In Sanskrit, Ma Ni means the wisdom jewel. A jewel is round. Round means complete. So Ma Ni means complete wisdom.</li>
+    <li>We normally do not understand what complete wisdom is. Complete wisdom has three powers, and it is never wrong.</li>
+  </ul>
+  <div class="trio">
+    <div class="pane moss"><span class="n">Any space</span><p>Wherever you go, you are never outside this Dharma system.</p></div>
+    <div class="pane moss"><span class="n">Any time</span><p>At any time, the system keeps running perfectly the same.</p></div>
+    <div class="pane moss"><span class="n">Any life form</span><p>Every life form is inside this system.</p></div>
+  </div>
+  <div class="answered">Complete wisdom covers all three, eternally: a complete view of karma.</div>
+  <p class="note">Lesson 1 described <a href="#parts">the Ma Ni jewel</a> as the wisdom in your essence. The questions below link the two.</p>
+</section>
+
+<section id="l8-beime">
+  <h2>Bei Me: the lotus</h2>
+  <ul class="plain">
+    <li>Bei Me means compassion. It also means lotus: a purifying system.</li>
+    <li>A lotus grows in muddy dirt. It grows into something pure and beautiful, and it smells incredible.</li>
+    <li>That ability, turning muddy dirt into a pure, amazing lotus, shows the highest power of our consciousness.</li>
+    <li>How? Right now we are in blindness and suffering. Through observing, we can create wisdom and joy for ourselves, and share it with others.</li>
+    <li>From blindness and suffering, we can change and become joy and wisdom, like a lotus. That is our true spiritual ability.</li>
+    <li>Sifu links this back to Ma Ni: the wisdom jewel is what lets the lotus grow out of the mud.</li>
+  </ul>
+  <h3>True compassion is natural being</h3>
+  <ul class="plain">
+    <li>We cannot really "compassion" others. We can share our care and our kindness, in a natural way of being.</li>
+    <li>What does that mean? I do not aim my kindness at one special person. I just am a kind person, and I share that kind power with every life.</li>
+    <li>I always share it in a wise way: careful, with good intention, with joy.</li>
+    <li>True compassion is not pity. It is sharing a pure, kind heart and pure care, with no ego, in a wise way, with joy and no greedy intention, towards every life.</li>
+  </ul>
+  <div class="answered">It is like the sun. The sun does not say, "I will shine my light only on this flower." It shines golden light on everything. Our heart can do that too.</div>
+  <p class="note">Lesson 7 covered <a href="#l7-ego">the ego kinds of compassion</a> and <a href="#l7-five">the five conditions of true compassion</a>.</p>
+</section>
+
+<section id="l8-hong">
+  <h2>Hong: the graduated consciousness</h2>
+  <ul class="plain">
+    <li>Hong, the last sound, means the consciousness has already graduated. It has already reached that power, and it is able to do it.</li>
+    <li>The wise jewel gives a complete, eternal view of life. What is it for? To help yourself and others become free from blindness and free from suffering.</li>
+    <li>When the consciousness has that ability, that is the last sound, Hong.</li>
+    <li>Tim's summary: Hong is when the consciousness can do this so perfectly that it is no longer limited by time, space or consciousness, because the wisdom is complete. Sifu agreed.</li>
+    <li>That awakening includes wisdom too: understanding the essence, function and goal of life, and using that understanding to purify all suffering and blindness, for you and for every life.</li>
+  </ul>
+  <div class="answered">Hong is basically equal to Buddha: a completely awakened consciousness. When this ability works perfectly, it becomes Buddha.</div>
+</section>
+
+<section id="l8-efg">
+  <h2>EFG: essence, function, goal</h2>
+  <p>Om Ma Ni Bei Me Hong clearly gives us the essence, function and goal of life.</p>
+  <div class="trio">
+    <div class="pane moss"><span class="n">Essence</span><p>Our awareness power. Consciousness is our essence. It can create blindness, so it can experience suffering. The essence is the part that feels suffering.</p></div>
+    <div class="pane moss"><span class="n">Function</span><p>We create suffering, but our consciousness has the power to observe it, and to change blindness into wisdom.</p></div>
+    <div class="pane moss"><span class="n">Goal</span><p>Not only for ourselves. We become wisdom power and kindness power. We free ourselves, then share that power with every life.</p></div>
+  </div>
+  <h3>The goal is in the present</h3>
+  <ul class="plain">
+    <li>The goal is never in the future.</li>
+    <li>Sifu wrote a song with this line in it: the final perfect goal is in each present moment, as a perfect gift.</li>
+    <li>It is a perfect gift because we all have the ability. But we still need to learn how to open that gift.</li>
+    <li>Om Ma Ni Bei Me Hong helps us open up the present. It helps us understand the view of life, purify our intention and develop our wisdom.</li>
+  </ul>
+  <div class="answered">So, hearing this sound, we can develop our wisdom and awaken.</div>
+</section>
+
+<section id="l8-double">
+  <h2>The last point: double awakening</h2>
+  <ul class="plain">
+    <li>Buddhas created this sound. Why? To help us.</li>
+    <li>Through the sound, we connect to perfect awakened consciousness: Buddha. Buddha protects us, guides us and influences us to awaken.</li>
+  </ul>
+  <div class="pair">
+    <div class="pane moss"><span class="n">Self-awakening</span><p>You understand the meaning. This comes from inside you.</p></div>
+    <div class="pane moss"><span class="n">Connection awakening</span><p>You respect the meaning, respect what Buddha created to help you, and sincerely ask for help. You connect to awakened consciousness, so it can help you. This comes from outside you.</p></div>
+  </div>
+  <div class="answered">Inside and outside together: double awakening.</div>
+  <p class="note">Lesson 7 gave the same two ways: <a href="#l7-ways">direct and connection</a>. Lesson 2 gave the two conditions: <a href="#l2-meaning">understand the meaning</a> and <a href="#l2-heart">a sincere heart</a>.</p>
+</section>
+
+<section id="l8-qa">
+  <h2>Questions and answers</h2>
+  <div class="voice">
+    <span class="who">Tim: is Ma Ni the wisdom we learn, or our essence, or both?</span>
+    <p>In week one we learned Ma Ni is the wisdom jewel, our essence, with no form, no beginning and no end. Now Ma Ni covers essence, function and goal. Is it the same thing?</p>
+  </div>
+  <ul class="plain">
+    <li>Sifu: in week one we talked about the ability itself as our essence, not about what that ability learns.</li>
+    <li>The wisdom ability is our nature. It is our seed. It is our essence.</li>
+    <li>That seed grows until it is aware of EFG: essence, function and goal, all three. That is what the ability learns: it sees through the truth of all three.</li>
+    <li>The wisdom jewel gives a complete view of life: complete in view, eternal in time, unlimited in quality. So it surely covers essence, function and goal.</li>
+  </ul>
+  <div class="voice">
+    <span class="who">Tim: is it my essence, or the essence of every life?</span>
+    <p>Sifu: every life's essence.</p>
+  </div>
+  <ul class="plain">
+    <li>Every life can develop wisdom, because the wisdom seed is already in every life.</li>
+    <li>We all have the wisdom ability, but we still have to grow it. Once it grows, it has the power to understand the essence, function and goal of life.</li>
+    <li>Even when we are in the blindness zone, the Buddha seed is still there. The wisdom jewel is still there, but not yet developed.</li>
+    <li>Cleaning out blindness is not cleaning out the essence. Even before you clean anything out, the essence is still there.</li>
+  </ul>
+  <div class="voice">
+    <span class="who">GD: so it has the potential to develop?</span>
+    <p>Sifu: yes. GD: it can create positive or negative. At the moment we create negative, by creating blindness. Then we learn the wisdom and develop it into an ability. That ability cleans out the blindness, and learns not to create it again, for ourselves and for others.</p>
+  </div>
+  <div class="voice">
+    <span class="who">Tim: is Bei Me the purifier?</span>
+    <p>The wisdom jewel covers every angle. Is Bei Me the purifier system that actually purifies your consciousness and every other consciousness? So it is not just fancy words. It is a real ability, in every present moment, to let that wisdom shine for yourself and others.</p>
+  </div>
+  <div class="answered">Sifu: yes. It becomes an ability for yourself and others.</div>
+</section>
+
+<section id="l8-examples">
+  <h2>EFG: a cup and an iPhone</h2>
+  <p>Tim: we brought in essence, function and goal quickly, and people at home may not know it. Sifu: everything has these three parts. Give me something.</p>
+  <div class="tablewrap"><table>
+    <thead><tr><th>Thing</th><th>Essence</th><th>Function</th><th>Goal</th></tr></thead>
+    <tbody>
+      <tr><td class="part">A cup</td><td>Glass.</td><td>For you to drink from.</td><td>The meaning: to help you out of thirst, so you can drink.</td></tr>
+      <tr><td class="part">An iPhone</td><td>The chips, and all the apps they create.</td><td>To help people connect, communicate and share.</td><td>It depends whose goal. For the company, making money is surely one goal. Also convenience, entertainment and education.</td></tr>
+    </tbody>
+  </table></div>
+  <ul class="plain">
+    <li>Tim asked: would the cup's goal be to hold a liquid? Sifu: no. The glass itself has no goal. Holding or not holding does not matter to the glass.</li>
+    <li>The goal is never the material itself.</li>
+    <li>For the iPhone, maybe the company has good intentions too: convenience, helping people be aware of more. But the bottom line of a business is making money.</li>
+  </ul>
+  <h3>Homework: use it in daily life</h3>
+  <ul class="plain">
+    <li>Tim: Sifu told us many years ago that if you use essence, function and goal to observe things, you develop wisdom faster.</li>
+    <li>Sifu: yes. We normally do not do this. We see one part and think we know the whole thing, and that creates blindness.</li>
+  </ul>
+</section>
+
+<section id="l8-human">
+  <h2>EFG: a human</h2>
+  <p class="lede">Sifu: this one is more tricky, abstract and complicated.</p>
+  <h3>Essence of a human</h3>
+  <p>Consciousness, which is awareness ability, plus the body, which is made of the four elements.</p>
+  <div class="tablewrap"><table>
+    <thead><tr><th>Element</th><th>In the body</th></tr></thead>
+    <tbody>
+      <tr><td class="part">Air</td><td>Your breathing.</td></tr>
+      <tr><td class="part">Fire</td><td>Your temperature.</td></tr>
+      <tr><td class="part">Water</td><td>Most of your body.</td></tr>
+      <tr><td class="part">Earth</td><td>The solid, material part.</td></tr>
+    </tbody>
+  </table></div>
+  <ul class="plain">
+    <li>The body, plus the power to be aware through the body: together, that is a human.</li>
+    <li>These are human-style four elements. The same four elements exist in other animals too.</li>
+    <li>Essence means what makes something happen: what it is made of.</li>
+  </ul>
+  <h3>Function of a human: two main ones</h3>
+  <ol class="steps">
+    <li><span><b>Sharing:</b> we share emotion. Our ability to share and communicate is number one on earth. That is why we can develop so many things through sharing.</span></li>
+    <li><span><b>Thinking:</b> our sharing reached the point where we created language. We use language to think. We organise information into knowledge and pass it down through the generations.</span></li>
+  </ol>
+  <h3>A possible function of a human: awakening</h3>
+  <ul class="plain">
+    <li>Humans have another possible function: awakening. That is why we help ourselves and everyone, and that is Om Ma Ni Bei Me Hong.</li>
+    <li>Humans have the power to feel other people's suffering, so we can develop compassion. That is half of the spiritual path.</li>
+    <li>Humans also have the power to observe the system of life (life forms) and the system of the universe (space and time).</li>
+    <li>Through that, we try to understand what is most meaningful in all this, and the final direction we can reach: complete freedom.</li>
+  </ul>
+  <div class="answered">All life looks for freedom. Humans have the power to reach it.</div>
+  <h3>High tech does not awaken us</h3>
+  <ul class="plain">
+    <li>High tech makes life more convenient and easier, and lets us be aware of more things outside. But it does not help us be aware of our own essence.</li>
+    <li>Sifu's example: people use their phones a lot. We think we receive a lot of information, but our neck bends forward. We are not aware of our body, our consciousness, our energy or our posture. We are lost in outside things.</li>
+    <li>High tech could help us awaken if we used it the right way. But it was designed for making money, entertainment and communication. So for now, it does not go that way.</li>
+  </ul>
+  <div class="answered">The iPhone is not going to awaken. We have to awaken: the consciousness, the power behind the life form, has to awaken.</div>
+</section>
+
+<section id="l8-closing">
+  <h2>Closing: consciousness is already eternal</h2>
+  <ul class="plain">
+    <li>Om Ma Ni Bei Me Hong helps us come back to being aware of our consciousness, and to develop it in a wise, kind way.</li>
+    <li>That is how consciousness finally realises the essence of life: consciousness itself has no form, and it is eternal.</li>
+    <li>We do not have to search for the eternal. The body cannot be eternal. Consciousness already is.</li>
+    <li>We are only connected to this body. Our true awareness power has no form. So we can meditate out of the body and enjoy awareness of the unlimited universe.</li>
+    <li>The function is to learn meditation: concentrate on ourselves, not on outside things.</li>
+    <li>In meditation, we become free from our surroundings and free from this body. We become pure self again: pure consciousness.</li>
+  </ul>
+  <div class="answered">Pure consciousness is free in every space. That is called complete awakening. Om Ma Ni Bei Me Hong helps us in that direction.</div>
+  <p class="note">Lesson 7 gave <a href="#l7-nirvana">a first look at Nirvana</a>: consciousness completely free, no longer limited by the body.</p>
+</section>
+
+<section id="l8-words">
+  <h2>Key words</h2>
+  <div class="row">
+    <span class="hint">Tap a card to see the meaning.</span>
+    <button class="btn" id="flipAll8" type="button">Show all meanings</button>
+  </div>
+  <div class="cards" id="cards8"></div>
+</section>
+
+<section id="l8-quiz">
+  <h2>Check your understanding</h2>
+  <div class="row">
+    <span class="score" id="score8">0 of 8 answered · 0 correct</span>
+    <button class="btn" id="reset8" type="button">Start again</button>
+  </div>
+  <div id="quizList8" class="flow"></div>
+</section>
+
+<footer>Lesson 1 notes come from the Descript transcript of the cut class video recorded 27 September 2026 (Lesson 1 Notes v1.2). Lesson 2 notes come from the Descript transcript of the follow-up class recorded 4 October 2026 (Lesson 2 Notes v1.0). Lesson 3 notes come from the Descript transcript of the cut class video recorded 11 October 2026 (Lesson 3 Notes v1.0). Lesson 4 notes come from the Descript transcript of the class recorded 18 October 2026, with Tim's class notes (Lesson 4 Notes v1.2). Lesson 5 notes come from the Descript transcript of the Lesson 5 class, with Tim's class notes and his added explanation of fear and the four devils (Lesson 5 Notes v1.1). Lesson 6 notes come from the Descript transcript of Class 6, with Tim's class notes (Lesson 6 Notes v1.0). Lesson 7 notes come from the TranscriptLOL transcript of the class recorded 15 November 2026, with Tim's class notes and his checks of unclear parts (Lesson 7 Notes v1.2). Lesson 8 notes come from the draft transcript of Class 8, recorded 22 November 2026, with Tim's checks of unclear parts (Lesson 8 Notes v1.1). Study page v8.3 · 20261123.</footer>
+</div>
+
+<script>
+const PATH = [
+  {n:"嗡", where:"Om", when:"Four sounds · the start", more:"Om holds four sounds in order: Argh (suffering), Oh (understanding life), Mm (free from suffering) and silent (a content heart). Om also opens the heart: \"My heart is open and sincere. I want to learn complete wisdom and complete compassion.\""},
+  {n:"嘛呢", where:"Ma Ni", when:"The jewel · your essence", more:"Ma Ni means jewel. The Ma Ni jewel is not a material jewel. The Ma Ni jewel is a spiritual energy jewel, and stands for the wisdom in your essence. Your essence is your awareness power, your true heart. Your essence has no form, no birth and no end. The jewel shines with eternal light, and that eternal light is eternal wisdom."},
+  {n:"叭咪", where:"Bei Me", when:"The lotus · a purified heart", more:"Bei Me means lotus. A lotus grows out of mud, but the flower comes out clean. Your heart can do the same: observe life, understand Dharma, use Dharma to guide your heart, purify blind intention, and grow toward wisdom. A purified heart shares good intention and good action with every life, as a lotus shares its beauty and smell."},
+  {n:"吽", where:"Hong", when:"Awakening · the end", more:"Hong means awakened consciousness: the consciousness that has passed through Om, Ma Ni and Bei Me. We call an awakened consciousness a Buddha. Once awake, a consciousness never goes back to blindness. An awakened consciousness has an open heart and complete wisdom, and wants to share with everyone."}
+];
+const WORDS = [
+  ["Mantra","A set of sounds you say or chant to train the mind."],
+  ["Dharma","The complete view of how life works."],
+  ["Buddhadharma","The Buddha's teaching of Dharma."],
+  ["Buddha","The name for a consciousness that has fully woken up."],
+  ["Bodhisattva","An awakened being who helps other lives wake up."],
+  ["Consciousness","The power in you that is aware of things. Sifu also calls it your awareness power, your true heart and your essence."],
+  ["Essence","Your true self. Your essence has no form, no birth and no end."],
+  ["Blind intention","Wanting or doing something without understanding life. Blind intention leads to blind action, and blind action leads to suffering."],
+  ["Blind belief","Believing something will happen because you want it to happen."],
+  ["Wisdom trust","Trust that comes from understanding why something is true."],
+  ["Reincarnation","Being born again into another life."],
+  ["Yi Jin Jing","A body training system from Buddhadharma, for a body with no tension, good energy and a beautiful posture."]
+];
+const QUIZ = [
+  {q:"What are the four parts of the mantra, as Sifu says them?", o:["Om, Ma Ni, Bei Me, Hong","Om, Argh, Oh, Mm","Om, Mani, Lotus, Om"], a:0, w:"In Chinese: 嗡 Om, 嘛呢 Ma Ni, 叭咪 Bei Me, 吽 Hong. Most English books write Om Mani Padme Hum."},
+  {q:"Why does Sifu teach this explanation, out of the many that exist?", o:["The other explanations are wrong","The meaning and function fit together perfectly, and the explanation purifies his consciousness and shows the complete system of life","Sifu made this explanation himself"], a:1, w:"Sifu does not say the others are wrong. The explanation is not his own. Sifu learned it."},
+  {q:"What do the four sounds in Om stand for, in order?", o:["Joy, peace, light, silence","Suffering, understanding, free from suffering, content","Birth, aging, illness, death"], a:1, w:"Argh is suffering. Oh is understanding life. Mm is free from suffering, which Sifu calls healing. Silent is a content heart."},
+  {q:"What is the second use of Om?", o:["To end a meditation","To open the heart: to begin meditation or another mantra, or to bow to a Buddha or Bodhisattva","To ask for protection"], a:1, w:"Used this way, Om means: my heart is open and sincere, and I want to learn complete wisdom and complete compassion."},
+  {q:"Why is the Ma Ni jewel not a material jewel?", o:["The Ma Ni jewel stands for the wisdom in your essence, which has no form","The Ma Ni jewel is too rare to find","The Ma Ni jewel is only a story"], a:0, w:"The Ma Ni jewel is a spiritual energy jewel. Your essence has no form, no birth and no end."},
+  {q:"What does a lotus growing out of mud show about the heart?", o:["The heart cannot change","The heart can grow out of blind intention and come out pure, through wisdom","The heart should stay away from the world"], a:1, w:"Observe life, understand Dharma, let Dharma guide your heart, purify blind intention, and grow toward wisdom."},
+  {q:"Why does Hong come last?", o:["Hong repeats Om to close the circle","Hong is the awakened consciousness that has passed through Om, Ma Ni and Bei Me","Hong is the easiest sound to say"], a:1, w:"Hong is a different word from Om. Sifu's memory aid: Hong is the feeling of waking up."},
+  {q:"Why is the mantra not religious, according to Sifu?", o:["Buddhism is not a religion. The Buddha taught the true force of life, your awareness power, and tried to free people from religion","The mantra belongs to a different religion","The mantra is too old to be religious"], a:0, w:"In the Buddha's time, India had more than 1,000 religions. People later turned Buddhism into a religion."},
+  {q:"Why does the sound of the mantra matter, on top of the meaning?", o:["A loud sound scares away fear","Sound changes the heart, and this sound wave was made by a perfect consciousness","Sound does not matter, only the meaning"], a:1, w:"A noisy place makes you nervous. Birdsong or a waterfall makes you feel joyful. The mantra's sound itself affects your heart."},
+  {q:"What is the difference between blind belief and wisdom trust?", o:["Blind belief is a wish, and the fear stays. Wisdom trust comes from understanding the wisdom, and gives real joy and safety","Blind belief is stronger than wisdom trust","There is no difference"], a:0, w:"Saying the mantra only to feel safe is blind belief. Understanding your essence, and where the mantra came from, gives wisdom trust."},
+  {q:"Where does fear come from, according to Sifu?", o:["From bad luck","From taking the temporary \"I\" too seriously","From not chanting enough"], a:1, w:"Your awareness is not the body it is aware of: \"A aware B, A is not B.\" When you stop connecting to the body, the \"I\" and its fear disappear."}
+];
+
+const QUIZ2 = [
+  {q:"What two things make a mantra work?", o:["Saying the mantra loudly and often","Understanding the meaning, and a sincere heart","Belonging to a religion, and having a teacher"], a:1, w:"Either one alone already works. Both together surely work. Without either one, saying the mantra is only a wish."},
+  {q:"Do you need every detail of the wisdom to have a sincere heart?", o:["Yes, you must understand everything first","No. A sincere heart begins when your heart sees freedom from suffering is possible, and truly wants it","No, a sincere heart only needs a strong voice"], a:1, w:"Hold one heart and one intention: I truly want to wake up, be out of blindness and suffering, and share the wisdom to help others."},
+  {q:"What are the two sources of peace?", o:["Your own power to grow toward wisdom, and the awakened ones who made the mantra and want to help you","Money and health","Silence and sleep"], a:0, w:"Your own power brings joy and peace. Knowing the awakened ones watch over you makes you feel safe and free."},
+  {q:"What is the meditation feeling?", o:["Thinking hard about your problems","You stop thinking about yourself, feel the sound and the vibration, and follow the meaning","Falling asleep while chanting"], a:1, w:"Your heart fills with thanks, and true peace and true wisdom appear."},
+  {q:"What is Sifu's short summary of how to make a mantra work?", o:["Say the mantra 108 times a day","Understand the meaning, follow the meaning, and understand that the consciousness who made the mantra surely wants to share and protect us","Say the mantra only when you are afraid"], a:1, w:"Sifu's close: the mantra is a quick way for everyone to find peace and wisdom."}
+];
+
+/* four parts */
+const pathList=document.getElementById("pathList");
+PATH.forEach((s,i)=>{
+  if(i>0){const l=document.createElement("div");l.className="link";l.setAttribute("aria-hidden","true");pathList.appendChild(l);}
+  const d=document.createElement("div");
+  d.className="stop"+(i===PATH.length-1?" last":"")+(i===0?" on":"");
+  d.innerHTML='<div class="dot" aria-hidden="true"></div><button type="button" id="part'+(i+1)+'" aria-expanded="'+(i===0)+'"><div class="where"></div><div class="when"></div><div class="more"'+(i===0?'':' hidden')+'></div></button>';
+  d.querySelector(".dot").textContent=s.n;
+  d.querySelector(".where").textContent=s.where;
+  d.querySelector(".when").textContent=s.when;
+  d.querySelector(".more").textContent=s.more;
+  const b=d.querySelector("button");
+  b.addEventListener("click",()=>{
+    const m=b.querySelector(".more"); const open=m.hidden;
+    m.hidden=!open; d.classList.toggle("on",open); b.setAttribute("aria-expanded",String(open));
+  });
+  pathList.appendChild(d);
+});
+
+const WORDS3 = [
+  ["Causation","Nothing happens from one cause. Many causes join into a result, and the result becomes a new cause. The chain never ends."],
+  ["I and mine","Seeing life from the ego: what is good for me, and what I want. Normal life causation runs on I and mine."],
+  ["Life-consciousness system","Consciousness joined to a body that goes through birth, aging, illness and death."],
+  ["Space-and-time system","Everything in space appears, develops, is destroyed and disappears."],
+  ["Reincarnation","Blind causation pulling a consciousness through birth and death again and again."],
+  ["Karma","Causation that joins together and becomes the next lifetime."],
+  ["Spiritual causation","The causation you create when you sing the mantra sincerely. Spiritual causation comes from wisdom and compassion, not I and mine. Sifu also calls it spiritual karma."],
+  ["Sincere heart","Condition 2 for a mantra to work. Level 1 is listening to every sound. Level 2 is washing, lighting incense and bowing."],
+  ["Observing Life Sound Bodhisattva","觀世音菩薩, the being who made the mantra. Also called Guanyin, or Avalokiteshvara in Sanskrit."],
+  ["Spring point and Bai Hui","湧泉, a point on the sole of the foot, and 百會, the point on top of the head. Energy rising from one to the other is a higher level of practice."]
+];
+const QUIZ3 = [
+  {q:"What is causation?", o:["One cause always gives one result","Many causes join into a result, and the result becomes a new cause, without end","Whatever happens is luck"], a:1, w:"One cause alone stays the same. Sifu's example: drops of water join into a river, and the river flows on into the ocean."},
+  {q:"Which two systems limit our experience of life?", o:["Work and rest","The life-consciousness system (birth, aging, illness, death) and the space-and-time system (appear, develop, destroy, disappear)","Thinking and feeling"], a:1, w:"Both systems run on blind, survival causation from I and mine. Going round both again and again is reincarnation."},
+  {q:"Why does singing the mantra sincerely not add to the survival cycle?", o:["Singing makes you forget the survival cycle","The mantra is an eternal force of wisdom and compassion, so singing the mantra sincerely creates spiritual causation, not I-and-mine causation","Singing only works in a temple"], a:1, w:"Sifu calls this Dharma spiritual causation, or spiritual karma."},
+  {q:"At Level 1, what should you do with your thinking?", o:["Force the thinking to stop","Leave the thinking alone and listen to every sound you say or sing","Think hard about the meaning of each word"], a:1, w:"Wanting to stop thinking is like cutting a waterfall with a knife. Listening stops the thinking by itself. Singing helps more than saying, since rhythm and melody hold your attention."},
+  {q:"What is Level 2 of a sincere heart?", o:["Raise energy from the spring point to Bai Hui","Wash, light incense, and bow to the statue of the Bodhisattva who made the mantra","Say the mantra 108 times"], a:1, w:"The statue is Thousand Hands, Thousand Eyes Observing Life Sound Bodhisattva. Energy from the spring point to Bai Hui is a much higher level."},
+  {q:"What is the homework?", o:["Sing the full 25-minute session every day","Sing 2 or 3 rounds (8 or 12 times), hear every sound, and do not count","Read the notes three times"], a:1, w:"Each sung round holds the mantra four times. Counting is more thinking, so the count does not matter."}
+];
+
+/* cards */
+function setCard(c,on){c.classList.toggle("flip",on);c.querySelector(".def").hidden=!on;c.querySelector(".tap").hidden=on;c.setAttribute("aria-pressed",String(on));}
+function makeCards(data, boxId, btnId, prefix){
+  const box=document.getElementById(boxId);
+  data.forEach(([t,def],i)=>{
+    const c=document.createElement("button");
+    c.type="button"; c.className="card"; c.id=prefix+i; c.setAttribute("aria-pressed","false");
+    c.innerHTML='<span class="term"></span><span class="tap">Tap to see meaning</span><span class="def" hidden></span>';
+    c.querySelector(".term").textContent=t; c.querySelector(".def").textContent=def;
+    c.addEventListener("click",()=>setCard(c,!c.classList.contains("flip")));
+    box.appendChild(c);
+  });
+  const btn=document.getElementById(btnId);
+  btn.addEventListener("click",()=>{
+    const show=btn.textContent.startsWith("Show");
+    box.querySelectorAll(".card").forEach(c=>setCard(c,show));
+    btn.textContent=show?"Hide all meanings":"Show all meanings";
+  });
+}
+makeCards(WORDS,"cards","flipAll","card");
+makeCards(WORDS3,"cards3","flipAll3","cardc");
+
+/* topics */
+const toggleAll=document.getElementById("toggleAll");
+toggleAll.addEventListener("click",()=>{
+  const close=toggleAll.textContent.startsWith("Close");
+  document.querySelectorAll("#topics details").forEach(d=>d.open=!close);
+  toggleAll.textContent=close?"Open all topics":"Close all topics";
+});
+
+/* quiz */
+function makeQuiz(data, listId, scoreId, resetId, prefix){
+  const list=document.getElementById(listId), scoreEl=document.getElementById(scoreId);
+  let answered=0, correct=0;
+  const update=()=>{scoreEl.textContent=answered+" of "+data.length+" answered · "+correct+" correct";};
+  function build(){
+    list.innerHTML=""; answered=0; correct=0; update();
+    data.forEach((item,qi)=>{
+      const box=document.createElement("div"); box.className="q";
+      box.innerHTML='<span class="qn">Question '+(qi+1)+' of '+data.length+'</span><p class="prompt"></p><div class="opts"></div><p class="why" hidden></p>';
+      box.querySelector(".prompt").textContent=item.q;
+      const opts=box.querySelector(".opts"), why=box.querySelector(".why");
+      item.o.forEach((text,oi)=>{
+        const b=document.createElement("button"); b.type="button"; b.className="opt"; b.id=prefix+qi+"o"+oi; b.textContent=text;
+        b.addEventListener("click",()=>{
+          if(box.dataset.done) return; box.dataset.done="1"; answered++;
+          const ok=oi===item.a; if(ok) correct++;
+          opts.querySelectorAll(".opt").forEach((x,xi)=>{x.disabled=true; if(xi===item.a) x.classList.add("right");});
+          if(!ok) b.classList.add("wrong");
+          why.innerHTML=ok?'<b class="ok">Correct.</b> ':'<b class="no">Not quite.</b> ';
+          why.appendChild(document.createTextNode(item.w)); why.hidden=false; update();
+        });
+        opts.appendChild(b);
+      });
+      list.appendChild(box);
+    });
+  }
+  document.getElementById(resetId).addEventListener("click",build);
+  build();
+}
+makeQuiz(QUIZ,"quizList","score","reset","q");
+makeQuiz(QUIZ2,"quizList2","score2","reset2","r");
+makeQuiz(QUIZ3,"quizList3","score3","reset3","t");
+
+const WORDS4 = [
+  ["Argh","The first sound of Om. Suffering."],
+  ["Oh","The second sound of Om. Understanding suffering, and where suffering comes from."],
+  ["Three kinds of suffering","The modern way: physical suffering is pain, mental suffering is worry, psychological suffering (stress) is fear."],
+  ["Birth, aging, illness, death","The cycle of four. The first Buddhist way to see suffering. Each stage is suffering in itself."],
+  ["Black hole habit","A habit in the wrong direction. Once you are in it, it grows bigger and pulls you in."],
+  ["Big bang habit","A habit in the right direction. Open and expanding, making us healthier, happier and wiser."],
+  ["Blind habit","Following a habit without wisdom. Following sharpness into anger and complaining is one example."],
+  ["Blind birth, blind death","Being born without knowing how or why, and dying without knowing when or how. Blind birth and death lead to reincarnation."],
+  ["Three poison consciousness","Greed, hate and stupidity. Our desire for I and mine is greed. Greed creates comparing, comparing becomes hate, and hate creates stupidity."],
+  ["I and mine","The ego: what we are, and what we want. Comparing and competing through I and mine brings suffering."],
+  ["Twelve Causation","十二因緣, the Buddhist chain of twelve links, where each link causes the next. Link 1 is blind (無明). Link 2 is action (行)."],
+  ["Blind action","Acting without being aware of what we do. Each blind act plants a blind cause, so the future fills with suffering."]
+];
+const QUIZ4 = [
+  {q:"What does the first sound of Om, Argh, mean?", o:["Joy","Suffering","Silence"], a:1, w:"Argh is suffering. Oh is understanding, Mmm is releasing, and Silence is empty Nirvana joy."},
+  {q:"What are the three kinds of suffering, the modern way?", o:["Greed, hate, stupidity","Physical pain, mental worry, psychological stress felt as fear","Birth, aging, death"], a:1, w:"The modern way is Sifu's own explanation. It is true, because it matches the Dharma."},
+  {q:"Why is aging suffering, even when we are young?", o:["Aging only starts in old age","Growing up means handling change: comparing, learning, and a body that grows and wears out","Aging is not suffering"], a:1, w:"Kids compare who learns faster. Adults compare jobs and pay. Teeth and bones grow, and old age brings stiffness and failing organs."},
+  {q:"What is the difference between a black hole habit and a big bang habit?", o:["A black hole habit grows and pulls you in. A big bang habit opens out and makes you healthier, happier and wiser","There is no difference","A big bang habit is a sudden change"], a:0, w:"We create our own habits, so we choose which way they grow."},
+  {q:"How does worry become illness and death?", o:["Worry has no effect on the body","Worry and stress block the body, nerves tense, blood cannot flow, and organs fail","Worry only affects sleep"], a:1, w:"Blood brings food to the organs and clears their waste. Without good blood flow, the organs fail, and aging becomes death."},
+  {q:"How do the three poisons grow?", o:["Each poison stands alone","Our desire for I and mine is greed. Greed creates comparing, comparing becomes hate, and hate creates stupidity","Stupidity comes first, then greed"], a:1, w:"We create every step ourselves. Hate becomes a fight between people, or a war between countries, and a small war becomes a big war."},
+  {q:"Where does suffering come from?", o:["Suffering appears by itself","Suffering is an effect, and every effect comes from a cause","Suffering comes from bad luck"], a:1, w:"GD's elbow example: one bang has many causes. Sifu: suffering never just appears. That idea is the bridge from Argh to Oh."},
+  {q:"What is blind action?", o:["Acting with your eyes closed","The first two links of the Twelve Causation joined: acting without being aware of what we do, which plants blind causes","An action that has no cause"], a:1, w:"Each blind act plants a blind cause, so the future fills with suffering. Remove the blind action power, and we stop making suffering for ourselves and others."}
+];
+makeCards(WORDS4,"cards4","flipAll4","cardd");
+makeQuiz(QUIZ4,"quizList4","score4","reset4","u");
+
+const WORDS5 = [
+  ["Oh","The second sound of Om. Understanding where suffering comes from, and how to make suffering go away."],
+  ["Temporary fix","Treating the symptom, such as a painkiller for a headache. It works now, but the suffering can come back."],
+  ["Permanent fix","Removing the root cause, so the suffering never comes back."],
+  ["Mental suffering","Worry."],
+  ["Psychological suffering","Fear. We feel that fear as stress, but we do not know the stress is fear."],
+  ["Physical suffering","Pain and tension."],
+  ["Blockage","Worry and stress stored in the body. Blockage presses on nerves and slows the blood."],
+  ["Passive side","Clearing out the bad: no more worry, no more stress, no more pain and tension."],
+  ["Active side","Building the good: a sharp, positive mind; inner peace and joy; a body in harmony and balance."],
+  ["Four devils","The three poison consciousness, worry, fear of death, and everyone else's four devils."],
+  ["Fear of death","The one fear all fear comes from. We never talk about it, so we never face it."]
+];
+const QUIZ5 = [
+  {q:"What does the second sound of Om, Oh, mean?", o:["Suffering","Understanding","Releasing"], a:1, w:"Argh is suffering. Oh is understanding. Mmm is releasing. Silence is empty Nirvana joy."},
+  {q:"What are the two jobs of Oh?", o:["Understand where suffering comes from, and understand how to make suffering go away","Feel suffering, then forget suffering","Chant, then bow"], a:0, w:"Understanding the cause alone does not free you from suffering. You need the second job too."},
+  {q:"What is the difference between a temporary fix and a permanent fix?", o:["There is no difference","A temporary fix treats the symptom, like a painkiller. A permanent fix removes the root cause","A permanent fix is only for physical pain"], a:1, w:"Chinese medicine heals both the cause and the symptom. We need both: an answer now, and a fix that stops the suffering coming back."},
+  {q:"What are the three kinds of suffering today?", o:["Greed, hate, stupidity","Mental worry, psychological fear felt as stress, physical pain and tension","Birth, aging, death"], a:1, w:"Money, job and relationship problems all fit inside mental and psychological suffering."},
+  {q:"We feel stress, but we do not know what the stress is. What does Buddhism say it is?", o:["Tiredness","Fear, in many different forms","Bad luck"], a:1, w:"Seeing that the stress is fear is itself understanding. That is the link from Argh to Oh."},
+  {q:"All fear comes from which fear?", o:["Fear of failure","Fear of death","Fear of other people"], a:1, w:"Fear of death is one of the four devils. We never talk about it, so the fear stays, and we never face it."},
+  {q:"A person is full of worry and will not look after the body. Where do you start?", o:["Argue until the person agrees","Help with the worry first, earn trust, then work on the body","Give up on the person"], a:1, w:"In most cases the body is the best place to start. But going against a worried person loses their trust."},
+  {q:"What are the passive side and the active side of the fix?", o:["The passive side clears out the bad. The active side builds the good","The passive side is resting. The active side is exercise","They are the same thing"], a:0, w:"The active side is hard to build until the passive side is cleared. When both happen, suffering disappears and joy appears."}
+];
+makeCards(WORDS5,"cards5","flipAll5","cardf");
+makeQuiz(QUIZ5,"quizList5","score5","reset5","v");
+
+const WORDS6 = [
+  ["Blind searching","Searching, from birth, for who and what I am, and what I want to own. Blind searching keeps us in reincarnation."],
+  ["I and mine","The two things we search for: who I am, and what I own."],
+  ["Ego searching","Searching for the ego, and holding on to things and people. Society teaches it. The fun fades."],
+  ["Curiosity searching","Searching to understand life and the truth, with no more blindness. It develops wisdom, and its joy lasts. The only key out of reincarnation."],
+  ["Inside and outside","Suffering starts inside, in blind consciousness. Outside is the body and the space around us."],
+  ["Four elements","Air (breath), fire (body heat), water (most of the body) and earth (the solid part). In a body, the four must unite."],
+  ["Ability","Being able to do something, not only knowing it. Mmm, the third sound, is the ability to release suffering."],
+  ["Joint karma","The karma we all create together."],
+  ["Bodhidharma","達摩. The master linked to Yi Jin Jing: open every joint, with no tension."],
+  ["Zhang San Feng","張三丰. The tai chi master: charge the energy, and connect the whole body."],
+  ["Nirvana","The fourth sound of Om. Complete content and joy, felt in still meditation."]
+];
+const QUIZ6 = [
+  {q:"Where does the root of suffering come from?", o:["Bad luck","Inside: our own blind consciousness searching, which pulls us into reincarnation","Other people"], a:1, w:"The outside, the body and space, matters too. We have to wake up to both."},
+  {q:"What two things do we all search for, from birth?", o:["Food and sleep","'I': who and what am I, and 'mine': what do I want to own","Money and fame"], a:1, w:"No one can stop this searching. Our thinking power works on these two most of the time."},
+  {q:"Searching is fun. So why does it lead to suffering?", o:["It does not","The fun disappears, and when it goes, you are not happy or satisfied","Searching is too slow"], a:1, w:"We search because there is so much blindness. The fun is temporary."},
+  {q:"What is the only key out of reincarnation and suffering?", o:["Ego searching","Curiosity searching: searching to understand life and the truth","Stopping all searching"], a:1, w:"Curiosity searching develops eternal wisdom, so its joy lasts. Society teaches ego searching instead."},
+  {q:"What does Sifu's tennis example show?", o:["Sport is good for you","Understanding is not ability. Reading the book does not mean you can play","Tennis is hard to learn"], a:1, w:"Oh is understanding. Mmm is the trained ability to release suffering."},
+  {q:"In the higher-level practice, what does each master teach?", o:["Bodhidharma: open every joint (Yi Jin Jing). Zhang San Feng: charge the energy and connect the whole body (tai chi)","Both teach chanting","Bodhidharma: tai chi. Zhang San Feng: yoga"], a:0, w:"Join both to Buddhist breathing, then sing the mantra with that breath."},
+  {q:"Why does the body matter for joy?", o:["It does not","Blocked joints and stuck energy cause pain. Pain brings worry, stress and a negative psychology, and then you cannot create joy","The body only matters for sport"], a:1, w:"Gravity pulls us into bad posture, bad posture creates blockage, and blockage creates suffering. The practice works against gravity."}
+];
+makeCards(WORDS6,"cards6","flipAll6","cardg");
+makeQuiz(QUIZ6,"quizList6","score6","reset6","w");
+
+const WORDS7 = [
+  ["Mmm","The third sound of Om. Releasing suffering: free from suffering and reincarnation, and awakening."],
+  ["Releasing","Taking out the roots of suffering. First your own suffering, then other lives' suffering."],
+  ["Compassion","Another word for releasing. Releasing your own suffering is compassion to yourself. Helping others release theirs is compassion to others."],
+  ["Ego-style compassion","Helping with ego inside: to feel good about yourself, without knowing how to help yourself, or out of fear of your own suffering."],
+  ["Five conditions of true compassion","Ability to help, your free will, their free will (they ask), enjoying it, and a wise, spiritual direction."],
+  ["Awakened consciousness","Buddha and Bodhisattva. They have no ego and want to help every life, if you ask sincerely."],
+  ["Blind habit of worry","A warning that grows into fear, until worry is the only thing left."],
+  ["Spiritual karma","Karma that grows from wisdom and compassion. When it appears, the heart becomes completely content."],
+  ["Natural Nirvana","Going back to your essence and finding it is already perfect."],
+  ["Unlimited joy","Helping other lives back to their own perfect essence, so your awareness connects to every life you help."]
+];
+const QUIZ7 = [
+  {q:"What does the third sound of Om, Mmm, mean?", o:["Suffering","Understanding","Releasing suffering"], a:2, w:"Argh is suffering. Oh is understanding. Mmm is releasing. Silence is Nirvana."},
+  {q:"What is another word for releasing?", o:["Compassion","Forgetting","Patience"], a:0, w:"Releasing your own suffering is compassion to yourself. Helping others release theirs is compassion to others."},
+  {q:"A student wants to help his depressed sister, but cannot help himself yet. What did Sifu call this?", o:["True compassion","An emotional ego game for himself","A sincere heart"], a:1, w:"Sifu told him to start with himself: be free from negative psychology, and be strong and healthy."},
+  {q:"Which of these is one of the five conditions of true compassion?", o:["You help whether or not they ask","They ask for your help, by their own free will","You help so people know you are good"], a:1, w:"The five: ability to help, your free will, their free will, enjoying it, and a wise, spiritual direction."},
+  {q:"Why is reincarnation like gambling?", o:["You can win a better life","It is blind, with no control","It costs money"], a:1, w:"The positive side: like a nightmare, you can still wake up."},
+  {q:"Can the mantra help you if you do not understand its meaning?", o:["No, never","Yes, if you say it sincerely, with respect and appreciation","Yes, but only in a temple"], a:1, w:"A sincere heart prepares the cause. With the meaning as well, it is a double force."},
+  {q:"How does worry start?", o:["As pain and a fair warning that grows into fear","As a gift from birth","From too much joy"], a:0, w:"Being careful is not wrong if you stay calm. Worry becomes a blind habit when fear takes over."},
+  {q:"What are the three parts of temporary releasing?", o:["Mind, psychology and body","Birth, aging and death","Argh, Oh and Mmm"], a:0, w:"Mind free from worry, psychology free from stress, and a powerful body. Then Mmm appears, and leads to Nirvana."}
+];
+makeCards(WORDS7,"cards7","flipAll7","cardh");
+makeQuiz(QUIZ7,"quizList7","score7","reset7","x");
+
+const WORDS8 = [
+  ["EFG","Essence, function and goal: three parts that everything has. Essence: what it is made of. Function: what it does. Goal: its meaning."],
+  ["Temporary awakening","Seeing the cause of one case of suffering, and taking care of that case: worry, stress, or pain and tension."],
+  ["Eternal awakening","Observing how your consciousness creates suffering, and taking out the root, the cause. The root turns into wisdom."],
+  ["Complete wisdom","Wisdom that is never wrong, for any space, any time and any life form. Ma Ni, the wisdom jewel."],
+  ["Wisdom seed","The wisdom ability in every life. It is our essence. It is there even in blindness, but it still has to grow. Also called the Buddha seed."],
+  ["Lotus","Bei Me. The purifying power of consciousness: growing something pure and beautiful out of muddy dirt."],
+  ["Natural being","Sharing kindness with every life, like the sun shining on everything, not aiming it at one special person."],
+  ["Graduated consciousness","Hong. A consciousness that already has the power to free itself and others. Equal to Buddha."],
+  ["Connection awakening","Connecting to awakened consciousness through the sound, with respect and a sincere ask, so it can help you."],
+  ["Double awakening","Self-awakening (you understand the meaning) plus connection awakening (awakened consciousness helps you)."],
+  ["Four elements","Air (breathing), fire (temperature), water (most of the body) and earth (the solid part). With consciousness, they make a human."]
+];
+const QUIZ8 = [
+  {q:"Sifu's first point: why must awakening exist?", o:["Because a teacher says so","Because blindness exists. If you are dreaming, you can surely wake up","Because everyone is already awake"], a:1, w:"If there is suffering, there is surely a way out of suffering. If there is blindness, wisdom surely exists to clean it out."},
+  {q:"What is the difference between temporary and eternal awakening?", o:["Temporary takes care of each case of suffering. Eternal takes out the root, the cause, and turns it into wisdom","Temporary is for young people. Eternal is for old people","There is no difference"], a:0, w:"Temporary covers worry, stress, and pain and tension. Eternal means observing how your consciousness creates suffering."},
+  {q:"Why does a jewel mean complete wisdom?", o:["A jewel is expensive","A jewel is round, and round means complete","A jewel is hard to find"], a:1, w:"Complete wisdom is never wrong, for any space, any time and any life form."},
+  {q:"What does the lotus, Bei Me, show?", o:["That life should stay away from mud","That our consciousness can grow something pure and beautiful out of blindness and suffering","That flowers are better than people"], a:1, w:"Bei Me means compassion and a purifying system. The lotus shows the highest power of our consciousness."},
+  {q:"What is true compassion, in Lesson 8?", o:["Feeling pity for people who suffer","Sharing a pure, kind heart with every life, with no ego, like the sun shining on everything","Helping only the people you love"], a:1, w:"Sifu calls it natural being: you do not aim your kindness at one special person."},
+  {q:"What is Hong?", o:["The first sound of Om","The graduated consciousness, equal to Buddha","A sound for good luck"], a:1, w:"Hong has the power to free itself and others, no longer limited by time, space or consciousness."},
+  {q:"A cup: essence is glass, function is to drink from. What is its goal?", o:["To hold a liquid","The meaning: to help you out of thirst","To look beautiful"], a:1, w:"The glass itself has no goal. The goal is never the material itself."},
+  {q:"Why does high tech not awaken us, according to Sifu?", o:["High tech is evil","It was designed for money, entertainment and communication, so it keeps us lost in outside things","It is too expensive"], a:1, w:"High tech could help if we used it the right way. But we have to awaken ourselves. The iPhone is not going to awaken."}
+];
+makeCards(WORDS8,"cards8","flipAll8","cardi");
+makeQuiz(QUIZ8,"quizList8","score8","reset8","y");
+</script>
+
+
+</body></html>

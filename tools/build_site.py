@@ -4,7 +4,7 @@ Run from the repo root:  python tools/build_site.py
 
 Inputs (repo root):
   Landing_Page_Mockup_*.html        -> public/index.html
-  Om_Mani_Padme_Hom_Study_Notes_*.html -> public/lesson-1.html ... lesson-7.html
+  Om_Mani_Padme_Hom_Study_Notes_*.html -> public/lesson-1.html ... lesson-N.html (one per lesson)
                                         + public/assets/notes.css, notes.js
 
 Hand-written files the script never touches:
@@ -22,6 +22,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "public"
 ACCENT = "#b8466e"
+WORDS_N = {n: w for n, w in enumerate("Zero One Two Three Four Five Six Seven Eight Nine Ten Eleven Twelve".split())}
 FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com">\n'
          '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n'
          '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus'
@@ -54,6 +55,8 @@ landing = landing_path.read_text(encoding="utf-8")
 CLEANUP = [
     ("'Recording date to confirm' in lesson headers",
      r'(<span class="eyebrow">Lesson \d) · Recording date to confirm</span>', r"\1</span>"),
+    ("recording dates in lesson headers",
+     r'(<span class="eyebrow">Lesson \d) · \d{1,2} [A-Z][a-z]+ \d{4}', r"\1"),
     ("double pointer to Lesson 2 in the fear note",
      r"Sifu said a deep wisdom sits behind the answer, and Sifu will explain it next time\. "
      r'Sifu answered GD\'s question in (<a href="#lesson2">Lesson 2</a>)\.',
@@ -123,8 +126,9 @@ js = must_replace(js, "const list=document.getElementById(listId), scoreEl=docum
 # ---------------------------------------------------------------- split lessons
 body = notes[notes.index('<div class="lesson-band" id="lesson1">'):notes.index("<footer>")]
 starts = [m.start() for m in re.finditer(r'<div class="lesson-band[^"]*" id="lesson\d"', body)]
-if len(starts) != 7:
-    sys.exit(f"Build stopped: expected 7 lessons, found {len(starts)}")
+COUNT = len(starts)          # number of lessons in the notes file
+if COUNT < 1:
+    sys.exit("Build stopped: no lessons found in the notes file")
 chunks = [body[s:e].strip() for s, e in zip(starts, starts[1:] + [len(body)])]
 
 # Which lesson each id lives in, so cross-lesson links can point at the right page.
@@ -163,7 +167,7 @@ def fix_links(text, n):
 def site_header(current):
     pills = "\n".join(
         f'    <a href="lesson-{i}.html"' + (' aria-current="page"' if i == current else "")
-        + f'>Lesson {i}</a>' for i in range(1, 8))
+        + f'>Lesson {i}</a>' for i in range(1, COUNT + 1))
     return f'''<header class="site-header">
   <div class="site-header-in">
     <a class="brand" href="./"><span class="han">嗡</span><span>{NAME}</span></a>
@@ -197,7 +201,7 @@ def page_head(title, desc, css_files):
 # Newest Thumbnails/Lesson_N_Thumbnail_*.png per lesson -> public/thumbnails/lesson-N.png
 thumbs = set()
 (OUT / "thumbnails").mkdir(exist_ok=True)
-for n in range(1, 8):
+for n in range(1, COUNT + 1):
     found = sorted((ROOT / "Thumbnails").glob(f"Lesson_{n}_Thumbnail_*.png"))
     if found:
         shutil.copyfile(found[-1], OUT / "thumbnails" / f"lesson-{n}.png")
@@ -228,7 +232,7 @@ for L in lessons:
     prev_link = (f'<a class="pn prev" href="lesson-{n-1}.html"><span>Previous</span>'
                  f'Lesson {n-1}: {html.escape(lessons[n-2]["title"])}</a>') if n > 1 else '<span></span>'
     next_link = (f'<a class="pn next" href="lesson-{n+1}.html"><span>Next</span>'
-                 f'Lesson {n+1}: {html.escape(lessons[n]["title"])}</a>') if n < 7 else \
+                 f'Lesson {n+1}: {html.escape(lessons[n]["title"])}</a>') if n < COUNT else \
                 '<a class="pn next" href="./#lessons"><span>Next</span>Back to all lessons</a>'
     page = f'''{page_head(f"Lesson {n}: {L['title']} · {NAME}", L["desc"], ["assets/site.css", "assets/notes.css"])}
 <body class="lesson-page">
@@ -303,15 +307,15 @@ def fix_article(m):
 
 
 lbody, count = re.subn(r"<article.*?</article>", fix_article, lbody, flags=re.S)
-if count != 7:
-    sys.exit(f"Build stopped: expected 7 lesson cards on the landing page, found {count}")
+if count != COUNT:
+    sys.exit(f"Build stopped: expected {COUNT} lesson cards on the landing page, found {count}")
 lbody = lbody.replace("© [YEAR] [SITE NAME]", "© 2026")
 if "{{" in lbody or "[SITE" in lbody:
     sys.exit("Build stopped: a placeholder is left in the landing page")
 
 index =f'''{page_head(f"{NAME} 嗡嘛呢叭咪吽 · Free video course",
                       f"Learn what the mantra {NAME} (嗡嘛呢叭咪吽) means, part by part. Often written Om Mani Padme Hum. "
-                      "Seven recorded classes with Master Wisdom Kindness (Sifu).",
+                      f"{WORDS_N[COUNT]} recorded classes with Master Wisdom Kindness (Sifu).",
                       ["assets/site.css"])}
 <body class="landing">
 {lbody}
