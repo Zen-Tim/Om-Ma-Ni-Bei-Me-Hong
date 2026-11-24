@@ -17,7 +17,7 @@ var LESSON_VIDEOS = {
   5: "https://youtu.be/3oZk5i2ucGA",
   6: "https://youtu.be/n1dQkXmoBCk",
   7: "https://youtu.be/ZsWu211SsHs",
-  8: ""
+  8: "https://youtu.be/rRCQU71WbEM"
 };
 
 /* ---- nothing to edit below this line ---- */
