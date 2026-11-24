@@ -319,6 +319,25 @@ index =f'''{page_head(f"{NAME} 嗡嘛呢叭咪吽 · Free video course",
 '''
 (OUT / "index.html").write_text(index, encoding="utf-8")
 
+# ---------------------------------------------------------------- word check
+# Lists wording that calls one view right and another wrong, or names a brand,
+# so Tim can look at it. It changes nothing and never stops the build.
+WORD_CHECK = [r"\bnot correct\b", r"\bis correct\b", r"100% correct", r"\bwrong way\b", r"\bonly true\b",
+              r"\biPhone\b", r"\bApple\b", r"\bSamsung\b", r"\bGoogle\b"]
+flagged = []
+for f in sorted(OUT.glob("*.html")) + [OUT / "assets" / "notes.js"]:
+    for ln, line in enumerate(f.read_text(encoding="utf-8").splitlines(), 1):
+        text = html.unescape(re.sub(r"<[^>]+>", " ", line))
+        for pat in WORD_CHECK:
+            m = re.search(pat, text, re.I if pat != r"\bApple\b" else 0)
+            if m:
+                s = max(0, m.start() - 60)
+                flagged.append(f"  {f.name}:{ln}  ...{' '.join(text[s:m.end() + 60].split())}...")
+                break
+print(f"Word check: {len(flagged)} line(s) to look at")
+for line in flagged:
+    print(line)
+
 print(f"Built {OUT} from {landing_path.name} and {notes_path.name}")
 for L in lessons:
     print(f"  lesson-{L['n']}.html  {L['title']}")
